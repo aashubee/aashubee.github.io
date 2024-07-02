@@ -7,6 +7,76 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
+/*chatpgt logos 
+*/
+.wrapper.style5 {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    text-align: center; /* Center the text */
+}
+
+.wrapper.style5 .content {
+    display: flex;
+    align-items: center; /* Vertically centers the inner and logo elements */
+}
+
+
+
+/* chatgpt main page photo code
+*/
+.wrapper.style1.special .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 40px 0; /* Added padding to ensure centering */
+}
+
+.text-content {
+    flex: 1;
+    margin-right: 80px; /* Increased margin for a larger gap */
+}
+
+.image-content {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+	margin-left: 40px;
+}
+
+.profile-image {
+    width: 250px; /* Increased size */
+    height: 250px; /* Increased size */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Ensure the body takes up the full viewport height */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Flexbox container */
+.container {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    height: 100vh;            /* Full viewport height */
+}
+
+/* Optional: Style for the iframe */
+.pdf {
+    border: none;             /* Remove default border */
+    max-width: 100%;          /* Responsive width */
+    max-height: 100%;         /* Responsive height */
+}
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -104,7 +174,7 @@ input, select, textarea {
 	body, input, select, textarea {
 		color: #fff;
 		font-family: "Open Sans", Helvetica, sans-serif;
-		font-size: 15pt;
+		font-size: 13pt;
 		font-weight: 400;
 		letter-spacing: 0.075em;
 		line-height: 1.65em;
@@ -3411,7 +3481,7 @@ input, select, textarea {
 			position: absolute;
 			right: 0;
 			top: 0;
-			vertical-align: middle;
+			
 			width: 7em;
 		}
 
@@ -3814,10 +3884,10 @@ input, select, textarea {
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner02.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner02.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner02.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner02.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -3885,7 +3955,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		padding: 6em 0 4em 0 ;
+		padding: 2em 0 1em 0 ;
 		background-color: #1d242a;
 		text-align: center;
 	}
@@ -3964,10 +4034,10 @@ input, select, textarea {
 /* Landing */
 
 	body.landing #page-wrapper {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner02.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner02.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner02.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner02.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -3985,10 +4055,10 @@ input, select, textarea {
 
 	body.is-mobile.landing #banner,
 	body.is-mobile.landing .wrapper.style4 {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner02.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner02.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner02.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner02.jpg");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
