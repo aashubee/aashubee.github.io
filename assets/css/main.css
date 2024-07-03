@@ -6,7 +6,32 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+/* main page hover effect chatgpt
+*/
+.hover-expand {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
 
+.hover-expand:hover {
+    transform: scale(1.05);
+}
+
+.spotlight {
+    transition: transform 0.3s ease; /* For a smooth scale transition */
+}
+
+.spotlight .image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.spotlight:hover .image img {
+    transform: scale(1.05);
+}
 
 /*chatpgt logos 
 */
@@ -3421,7 +3446,7 @@ input, select, textarea {
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #21b2a6;
+		background: #0a2747;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
