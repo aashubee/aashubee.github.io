@@ -6,6 +6,93 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+/* Ensure the header has enough padding */
+#main > header {
+    padding: 12em 0 10em 0;
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner02.jpg");
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner02.jpg");
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner02.jpg");
+    background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner02.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+#main > header h2 {
+    font-size: 1.75em;
+    margin: 0 0 0.5em 0;
+}
+
+#main > header p {
+    color: inherit;
+    letter-spacing: 0.225em;
+    text-transform: uppercase;
+    top: 0;
+}
+
+#main > header p a {
+    color: inherit;
+}
+
+@media screen and (max-width: 1680px) {
+    #main > header {
+        padding: 10em 0 8em 0;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #main > header {
+        padding: 8em 3em 6em 3em;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #main > header {
+        padding: 10em 3em 8em 3em;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #main > header {
+        padding: 5em 3em 3em 3em;
+    }
+
+    #main > header h2 {
+        font-size: 1.25em;
+        margin: 0 0 1em 0;
+    }
+}
+
+body.is-mobile #main > header {
+    background-attachment: scroll;
+}
+
+/* Ensure the container and grid don't overlap with header */
+.container {
+    width: 90%;
+    margin: 3em auto; /* Added margin to create space below the header */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.project {
+    background-color: #000;
+    transition: background-color 0.7s ease, color 0.7s ease, transform 0.7s ease;
+}
+
+
+
+
+
+
+
 /* main page hover effect chatgpt
 */
 .hover-expand {

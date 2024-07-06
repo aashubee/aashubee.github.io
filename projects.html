@@ -1,172 +1,165 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Aashrith - Projects</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <style>
-            .container {
-                width: 90%;
-                margin: 0 auto;
-                padding: 40px;
-				color:#666
-            }
-            .grid {
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                gap: 40px;
-            }
-            
-            .project img {
-                width: 100%;
-                height: auto;
-            }
-            .project-description {
-                padding: 15px;
-            }
-            .project-description h3 {
-                margin: 0;
-                font-size: 1.2em;
-            }
-            .project-description p {
-                color: #666;
-            }
-			.project{
-				background-color: #000000;
-				transition: background-color 0.7s ease, color 0.7s ease, transform 0.7s ease;
-			}
-            .project:hover {
-                background-color: #007BFF;
-                color: #fff;
-                transform: scale(1.05);
-            }
-            .project:hover .project-description p {
-                color: #fff;
-            }
-            @media (min-width: 600px) {
-                .grid {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
-            @media (min-width: 900px) {
-                .grid {
-                    grid-template-columns: repeat(3, 1fr);
-                }
-            }
-            .centered-header {
-            text-align: center;
-            margin: 0 auto;
-            padding: 20px;
+<head>
+    <title>Aashrith - Projects</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+       .container{
+		height:fit-content
+	   }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px;
+            margin-top: 20px;
         }
-        </style>
-	</head>
-	<body class="landing is-preload">
-		<!-- Page Wrapper -->
-		<div id="page-wrapper">
-			<!-- Header -->
-			<header id="header" class="alt">
-				<h1><a href="index.html">Aashrith</a></h1>
-				<nav id="nav">
-					<ul>
-						<li class="special">
-							<a href="#menu" class="menuToggle"><span>Menu</span></a>
-							<div id="menu">
-								<ul>
-									<li><a href="index.html">Home</a></li>
-									<li><a href="resume.html">Resume</a></li>
-									<li><a href="projects.html">Projects</a></li>
-									<li><a href="contact.html">Contact</a></li>
-								</ul>
-							</div>
-						</li>
-					</ul>
-				</nav>
-			</header>
+        .project img {
+            width: 100%;
+            height: auto;
+        }
+        .project-description {
+            padding: 15px;
+        }
+        .project-description h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .project-description p {
+            color: #666;
+        }
+        .project {
+            background-color: #000;
+            transition: background-color 0.7s ease, color 0.7s ease, transform 0.7s ease;
+        }
+        .project:hover {
+            background-color: #007BFF;
+            color: #fff;
+            transform: scale(1.05);
+        }
+        .project:hover .project-description p {
+            color: #fff;
+        }
 
-			<!-- Main -->
-			<article id="main">
-				<header>
-					<h2>Projects</h2>
-					<p>Engineering Projects throughout the years</p>
-				</header>
-				<div class="container">
-					<div class="grid">
-						<div class="project" onclick="location.href='holycr@b.html';">
-							<img src="images/CR@B/pic01.jpg" alt="HOLY CR@B !!">
-							<div class="project-description">
-								<h3>HOLY CR@B !!</h3>
-								<p>15-pound Eggbeater Combat Robot</p>
-							</div>
-						</div>
-						<div class="project" onclick="location.href='frc.html';">
-							<img src="images/FRC/real-robot.jpg" alt="FRC - Hamazon">
-							<div class="project-description">
-								<h3>FRC - Hamazon</h3>
-								<p>Team 1902 Exploding Bacon's 2022 Robot </p>
-							</div>
-						</div>
-						<div class="project" onclick="location.href='project_template.html';">
-							<img src="images/pic03.jpg" alt="Drone Delivery Sytem">
-							<div class="project-description">
-								<h3>Drone Delivery System</h3>
-								<p>Sentien Robotics - Consultant R&D Project</p>
-							</div>
-						</div>
-						<div class="project" onclick="location.href='project_template.html';">
-							<img src="images/pic04.jpg" alt="Project 4">
-							<div class="project-description">
-								<h3>Automated Fire Suspension System</h3>
-								<p>MECENG 100 Final Project</p>
-							</div>
-						</div>
-						<div class="project" onclick="location.href='project_template.html';">
-							<img src="images/pic05.jpg" alt="Project 5">
-							<div class="project-description">
-								<h3>Spotify Muse</h3>
-								<p>2 Day Neurotech Hackathon Project</p>
-							</div>
-						</div>
-						<div class="project" onclick="location.href='project_template.html';">
-							<img src="images/pic05.jpg" alt="Project 6">
-							<div class="project-description">
-								<h3>Molex - FA Automation</h3>
-								<p>[INTERNSHIP IN PROGRESS]</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</article>
+        @media (min-width: 600px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+	
+		
+/* mobile only styles when the device is 0-600px in maximum width */
+		</style>
+</head>
+<body class="landing is-preload">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="index.html">Aashrith</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="resume.html">Resume</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-			
-			
-
-			 <!-- CTA -->
-             <section class="wrapper style4">
-                <div class="centered-header">
-                    <header>
-						<h3 style="margin-top: 20px;">And many more to come...</h3>
-                    </header>
+        <!-- Main -->
+        <article id="main">
+            <header>
+                <h2>Projects</h2>
+                <p>Engineering Projects throughout the years</p>
+            </header>
+        </article>
+        
+        <!-- Projects Grid -->
+        <div class="container">
+            <div class="grid">
+                <div class="project" onclick="location.href='holycr@b.html';">
+                    <img src="images/CR@B/pic01.jpg" alt="HOLY CR@B !!">
+                    <div class="project-description">
+                        <h3>HOLY CR@B !!</h3>
+                        <p>15-pound Eggbeater Combat Robot</p>
+                    </div>
                 </div>
-            </section>
+                <div class="project" onclick="location.href='frc.html';">
+                    <img src="images/FRC/real-robot.jpg" alt="FRC - Hamazon">
+                    <div class="project-description">
+                        <h3>FRC - Hamazon</h3>
+                        <p>Team 1902 Exploding Bacon's 2022 Robot </p>
+                    </div>
+                </div>
+                <div class="project" onclick="location.href='project_template.html';">
+                    <img src="images/pic03.jpg" alt="Drone Delivery System">
+                    <div class="project-description">
+                        <h3>Drone Delivery System</h3>
+                        <p>Sentien Robotics - Consultant R&D Project</p>
+                    </div>
+                </div>
+                <div class="project" onclick="location.href='project_template.html';">
+                    <img src="images/pic04.jpg" alt="Project 4">
+                    <div class="project-description">
+                        <h3>Automated Fire Suspension System</h3>
+                        <p>MECENG 100 Final Project</p>
+                    </div>
+                </div>
+                <div class="project" onclick="location.href='project_template.html';">
+                    <img src="images/pic05.jpg" alt="Project 5">
+                    <div class="project-description">
+                        <h3>Spotify Muse</h3>
+                        <p>2 Day Neurotech Hackathon Project</p>
+                    </div>
+                </div>
+                <div class="project" onclick="location.href='project_template.html';">
+                    <img src="images/pic05.jpg" alt="Project 6">
+                    <div class="project-description">
+                        <h3>Molex - FA Automation</h3>
+                        <p>[INTERNSHIP IN PROGRESS]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-			<!-- Footer -->
-			<footer id="footer">
-				
-				<ul class="copyright">
-					<li>&copy; Aashrith Beesabathuni </li>
-				</ul>
-			</footer>
-		</div>
+        <!-- CTA -->
+        <section class="wrapper style4">
+            <div class="centered-header">
+                <header>
+                    <h3 style="margin-top: 20px;">And many more to come...</h3>
+                </header>
+            </div>
+        </section>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-	</body>
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="copyright">
+                <li>&copy; Aashrith Beesabathuni </li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>

@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Aashrith - Drone Payload</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: left;
+        }
+        .gallery1 {
+            display: grid;
+            flex-wrap: nowrap; /* Prevent wrapping */
+            grid-template-columns: repeat(1, 1fr); /* Fixed 3 columns */
+            justify-content: center;
+            margin: 20px;
+            overflow-x: auto; /* Enable horizontal scrolling if needed */
+        }
+        .gallery2 {
+            display: grid;
+            flex-wrap: nowrap; /* Prevent wrapping */
+            grid-template-columns: repeat(2, 1fr); /* Fixed 3 columns */
+            justify-content: center;
+            margin: 20px;
+            overflow-x: auto; /* Enable horizontal scrolling if needed */
+        }
+        .gallery3 {
+            display: grid;
+            flex-wrap: nowrap; /* Prevent wrapping */
+            grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
+            justify-content: center;
+            margin: 20px;
+            overflow-x: auto; /* Enable horizontal scrolling if needed */
+        }
+        .gallery-item {
+            margin: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            flex: 0 0 auto; /* Ensure items don't shrink */
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .gallery-item p {
+            padding: 15px;
+            margin: 0;
+            text-align: center;
+            font-size: 14px;
+        }
+        .banner {
+            background: linear-gradient(to right, #171718, #0f2b86);
+            padding: 20px;
+            text-align: center;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .skills li {
+            background: #000000;
+            border-radius: 25px; /* Rounded rectangle */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 10px;
+            padding: 20px;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            width: 150px; /* Make it longer */
+            height: 70px; /* Adjust the height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+        .skills li:hover {
+            transform: scale(1.1);
+        }
+        .skills li i {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #4facfe;
+        }
+        .skills li span {
+            margin-left: 10px; /* Space between icon and text */
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">Aashrith</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="resume.html">Resume</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <article id="main">
+            <header>
+                <h2>Sentien Robotics - Payload</h2>
+                <p>Startup consulting project for drone payload delivery</p>
+            </header>
+            <!-- Banner -->
+            <section class="banner">
+                <h1>Skills used in this project</h1>
+                <ul class="skills">
+                    <li>Microcontroller</li>
+                    <li>Bluetooth</li>
+                    <li>CAD (Solidworks)</li>
+                    <li>3D Printing</li>
+                    <li>CNC Router</li>
+                    <li>Misc. Machining</li>
+                </ul>
+            </section>
+            <section class="wrapper style5">
+                <div class="inner">
+                    <h3>Project Overview</h3>
+                    <p class="align-left">
+                        Through ESB (Engineering Solutions at Berkeley), I was able to gain a lot of valuable experience working with startups all around the bay. As a student
+                        who joined immediately after the club was created, the connections and lessons I learned from these semester long projects has help shaped many
+                        aspects of my career and work thus far. Given a team of 5 engineers, each team is tasked to work with a startup ranging from bio-tech to UAV's, 
+                        and has 4 months to work on specific projects the company needs. One such startup was Sentien Robotics [insert link], an early stage startup creating 
+                        mobile drone fleet management systems. Their main project was the Hive-XL, a trailer sized vehicle carrying a heterogenous set of 80 drones to deploy
+                        anywhere necessary. By having flight protocols and swarm controls localized to the Hive, Sentien is able to set up work wherever the drone fleet is needed.
+                    </p>
+                    <p class="align-left">
+                        Our specific project was based on expanding the capabilities of the hive, moving into payload delivery
+                        My team was tasked with 
+                        creating an efficient storage and payload indexing system for the 
+                        Hive, along with designing the 
+                        end-effector for drones to carry the sorted packages.
+                        Given a semester, access to the HiveXL and all its components, we had to protype and build a proof of concept on how the payload delivery would look on these
+                        hive machines. In the first use-case the company wanted to try simple "tennis ball" style packages, a placeholder for fertilizer
+                        packages to efficiently plant an entire field!
+                    </p>
+                    <h1 style="text-align: center;">Image Gallery</h1>
+                    <div class="gallery1">
+                        
+                        <div class="gallery-item">
+                            <img src="images/FRC/real-robot.jpg" alt="Image 2">
+                            
+                        </div>
+                        
+                        <!-- Add more images as needed -->
+                    </div>
+                    <h3>Design Overview</h3>
+                    <p class="align-left">
+                        The design we ended up going with consisted of 3 main compoennts. The acrylic holding container to which had all our tennis ball packages, an indexing 
+                        system to load one ball in at a time, and the end-effector attatched to the drone allowing for easy pick-up. The hive itself provided
+                        a tricky problem for this, as we had to juggle the many prodtruding geometries of the back of the trailer. Primiarily, ensuring that the 
+                        drones were able to reach the exit point of the container would be the most diffuclt part, something we based our container deisgn off of.
+                        The container was designed with the
+                        Hive in mind, allowing for easy removeability while still being fully supported by the trailer. Under, the indexing system was inspired by a ski-ball
+                        mechanism, utilzing simple servo control to ensure a single ball was deployed each time. The 3rd (and argueably coolest) mechanism was the end-effector,
+                        and all the wireless communiation that came with it. This was my part of the project, as we split up work early in the semester to ensure all aspects
+                        that the company wanted would be delivered. 
+                    </p>
+                    <p class="align-left">
+                        Due to the limited time frame given to teams for the competitions,  having a fleshed-out design done as quickly as possible is extremely important. 
+                        After leading multiple meetings discussing our goals/priorities for the bot, we had a generic list of what our end goal should look like. I developed my 
+                        CAD skills the previous year by working on designing the 2021 robot, allowing me to spearhead the design for this year. 
+
+                        Starting with initial 2D side concept sketches, I then started CAD from the ground up. For 2022, our CAD team was severely limited compared to previous 
+                        years, so splitting up work was vital. I led both the shooter subsytem, and the drivetrain subsystem. Setting a deadline of 2 weeks, we managed to have 
+                        a full assembly of our robot (including fasteners).
+                    </p>
+                        
+                    
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/H1aX_vVJq-M?feature=youtu.be" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/FRC/full-robot.png" alt="Image 1">
+                        
+                        </div>
+                    </div>
+                    <h3>Mechanisms</h3>
+                    <p class = 'align-left'>Drivetrain:This year’s Drivetrain design is a 6-wheel “West Coast Drive,” equipped with Andymark Performance wheels in the center and Colson wheels on the side. With a WCP SS Gearbox, Hamazon is able to dash around the field very quickly and efficiently. Because of our team’s discussion during our Match Strategy meeting, we aimed to build a Drivetrain that would be able to play defense, (due to the defensive nature of this game), and be robust enough to survive a fall during the climb, both of which led us to this design. </p>
+                    <p class = 'align-left'>Shooter: The Shooter is equipped with dual 4’’ launch wheels capable of running at 5,000 RPM to consistently score in the UPPER HUB. 
+                        The Limelight is positioned at the front of the shooter to allow for precise shooting and positioning of the robot relative to the retroreflective tape
+                        The shooter is my favorite mechanism, since I was able to take it start to finish with many cool and new ideas for the team. The shooter had 2 massive 
+                        4 inch wheels in the front, with geometry that optimized the compression on the game pieces for shooting them out. There are also smaller "backspin wheels", 
+                        imperative to reduce the magnus effect that the balls would face when being shot. By adjusting the belt + gear ratio to allow the backspin wheels to have
+                         the same tip-speed as main wheels, I was able to eliminate the back-spin effect causing balls to be unpredictable. Modeling the shooter in Desmos also 
+                         allowed me to find optimal speeds given our geometry and the MOI we needed for our flywheel to give the consecutive balls the same power level when shot.
+                    </p>
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/FRC/drivetrain.png" alt="Image 1">
+                     
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/FRC/shooter.png" alt="Image 1">
+                      
+                        </div>
+                    </div>
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/FRC/real-drivetrain.jpg" alt="Image 1">
+                         
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/FRC/intake-prototype.png" alt="Image 1">
+                            
+                        </div>
+                    </div>
+                    <h3>Manufacturing + Assembly</h3>
+                    <p class = 'align-left'>After the CAD was completed, manufacturing of many different parts began. All the sheet metal on our robot is completed by Magnus Hi-Tech, 
+                        a sponsor company that is able to plasma-cut, bend, and even powder coat our metal (Magnus spreadsheet). Everything else on the robot is 
+                        machined in-house through the use of the machines at our build space (lathes, mills, CNC routers & hand tools). Specifically, I utilized the CNC Router the
+                        most, for the complex geometries we needed to produce, especailly for early prototypes. After completing all 
+                        required in-house machining with an organizational spreadsheet, assembly was able to begin with the sheet metal parts. Using CAD as a reference, 
+                        assembly of the robot ran very smoothly. Originally starting with the drivetrain and working our way up, Hamazon's assembly was able to be completed 
+                        efficiently, leaving enough time for programmers and drive practice.</p>
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/FRC/real-indexer.jpg" alt="Image 1">
+                          
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/FRC/real-intake.png" alt="Image 1">
+                          
+                        </div>
+                        
+                    </div>
+                    <h3>Conclusion/Next Steps</h3>
+                    <p class = "align-left">Overall, this was one of my favorite engineering projects so far, being able to combine skills to create a very tangible and very successful robot. 
+                        As this was my senior year, I would not be able to compete in these competitions from the future, as FRC is only aimed for high-schoolers. That being said,
+                        I have ensured that the team will still go strong even after the current class graduates, by teaching and preparing the newer class in many technical and 
+                        soft skills. This, along with starting a proper documentation system (Part Spreadsheets, Tech Binders) ensured that not only was I able to have a successful 
+                        senior year building the robot, but that the team would have a good framework to continue in the following years!
+                    </p>
+                    <h3>Screenshots / Media</h3>
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/FRC/shooting.png" alt="Image 1">
+                          
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/FRC/compilation.png" alt="Image 1">
+                          
+                        </div>
+                    </div>
+                    <h2 class="align-center" style="margin-top: 10px; margin-bottom: 10px;">
+                        <a href="projects.html">See All Projects</a>
+                    </h2>
+                </div>
+            </section>
+        </article>
+        
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="copyright">
+                <li>&copy;Aashrith Beesabathuni</li>
+            </ul>
+        </footer>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
