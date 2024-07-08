@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Aashrith -[INSERT]</title>
+    <title>Aashrith - Fire Suspension</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -125,8 +125,8 @@
         <!-- Main -->
         <article id="main">
             <header>
-                <h2>Template</h2>
-                <p>Template</p>
+                <h2>Fire Suspension System</h2>
+                <p>ME 100 (Internet of Things) Final Project</p>
             </header>
             <!-- Banner -->
             <section class="banner">
@@ -144,10 +144,17 @@
                 <div class="inner">
                     <h3>Project Overview</h3>
                     <p class="align-left">
-                        Template
+                        Me 100 [Inset sylabus link]
                     </p>
                     <p class="align-left">
-                        Template
+                        Our specific project was based on expanding the capabilities of the hive, moving into payload delivery
+                        My team was tasked with 
+                        creating an efficient storage and payload indexing system for the 
+                        Hive, along with designing the 
+                        end-effector for drones to carry the sorted packages.
+                        Given a semester, access to the HiveXL and all its components, we had to protype and build a proof of concept on how the payload delivery would look on these
+                        hive machines. In the first use-case the company wanted to try simple "tennis ball" style packages, a placeholder for fertilizer
+                        packages to efficiently plant an entire field!
                     </p>
                     <h1 style="text-align: center;">Image Gallery</h1>
                     <div class="gallery1">
@@ -161,7 +168,15 @@
                     </div>
                     <h3>Design Overview</h3>
                     <p class="align-left">
-                       Template
+                        The design we ended up going with consisted of 3 main components. The acrylic holding container to which had all our tennis ball packages, an indexing 
+                        system to load one ball in at a time, and the end-effector attached to the drone allowing for easy pick-up. The hive itself provided
+                        a tricky problem for this, as we had to juggle the many protruding geometries of the back of the trailer. Primarily, ensuring that the 
+                        drones were able to reach the exit point of the container would be the most difficult part, something we based our container design off of.
+                        The container was designed with the
+                        Hive in mind, allowing for easy removability while still being fully supported by the trailer. Under, the indexing system was inspired by a ski-ball
+                        mechanism, utilizing simple servo control to ensure a single ball was deployed each time. The 3rd (and arguably coolest) mechanism was the end-effector,
+                        and all the wireless communication that came with it. This was my part of the project, as we split up work early in the semester to ensure all aspects
+                        that the company wanted would be delivered. 
                     </p>
                     <p class="align-left">
                        
@@ -178,12 +193,27 @@
                         
                         </div>
                     </div>
-                    <h3>Template</h3>
-                    <p class = 'align-left'>Template
+                    <h3>Gripper</h3>
+                    <p class = 'align-left'>The gripper is the main mechanism that would interface the existing drones with our system. As a 
+                        proof of concept for the project, Sentien asked that we create enough for one drone, but design so it is interfaceable with
+                        any of them. When designing the gripper, there are a few
+                        main things I considered to ensure a smooth interface. 
                     </p>
-                    
+                    <ul class="align-left">
+                        <li> Wireless communication</li>
+                        <li> Balanced center of mass</li>
+                        <li> Low mass to allow drone to fly</li>
+                        <li> Interface with drone's communication system</li>
+                        <li> Easily interchangabel grippers for the future</li>
+                    </ul>
                     <p class="align-left">
-                        Template
+                        Overall, the gripper was powered by a servo motor and a linkage system, translating rotational movement into translational. This allowed the gripper
+                        to close in on the payload, while keeping the design low-weight. To actually power the servo, I realized that the drone had extra PWM channels,
+                        so simply sending a signal through the drone would simplify the functionality. The drone also had onboard 5V, so the servo aspect was complete.
+                        In terms of Bluetooth communication, I used an HC-05 module to communicate with my computer, as to when to actually send in the PWM signal to open
+                        or close the gripper. Later on, this was automated so that whenever the payload was deployed, the gripper would automatically receive a wireless signal
+                        and close. My first design was very bulky, and enclosed many electronics in a box. After several design changes, I realized that it would be more efficient
+                        to house the electronics in the drone itself, simplifying packaging significantly.
 
                     </p>
                 
@@ -215,7 +245,12 @@
                     </div>
                     <h3>Conclusion/Next Steps</h3>
                     <p class = "align-left">
-                        Template
+                        Overall, this was one of my first college team engineering projects, and I am very happy to have been paired with a group of engineers with a diverse
+                        set of skills. Normally, our projects only last a semester, but Sentien Robotics enjoyed our work enough to hire 2 project teams the following semester!
+                        By working on a real world problem that a company might face/want to expand into, I was able to gain knowledge on how a project workflow should be maintained
+                        and also gain a cool project to add to my portfolio! If i could go back and visit, I would make certain design changes to our overall system. The next step
+                        I would look at is to use the same communication protocol the drone uses to fleet control for the gripper. Currently, there is an extra PCB module which
+                        allows me for serial communication. But, it would be more efficient to use the existing wireless communication to actuate the gripper.
                     </p>
                     <h3>Screenshots / Media</h3>
                     <div class="gallery2">

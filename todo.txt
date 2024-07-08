@@ -1,0 +1,30 @@
+Mobile Formatting
+- Ensure header name is correct [DONE]
+- Try fixing skills formatting on mobile 
+- Try making the banners bigger for mobile too
+
+Resume
+- Add Download Button
+
+Project Pages
+FRC
+- Add Tech Binder Link
+- Maybe link for the part spreadsheet
+
+Drone Automation
+- Figure out if want to add final presentation
+- Still needs all images 
+
+Holy crab
+- Still need images
+- Try adding video of any fight
+
+ME 100
+- Add wording
+- Add final presentation (see if its nice)
+- Add pictures
+
+Spotify Muse
+- Add wording
+- Figure out if want to add final presentation
+- Add pictures
