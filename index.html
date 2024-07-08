@@ -11,6 +11,26 @@
 			.txt-rotate > .wrap { 
 				border-right: 0.08em solid #666;
 			}
+			@media (max-width: 600px) {
+   			 .content-wrapper {
+    	    	flex-direction: column;
+    			}
+			.text-content{
+				margin: 0;
+				padding: 0;
+			}
+			.image-content {
+				order: 2;
+				margin-left: 0; /* Reset margin for smaller screens */
+				
+    		}
+			.profile-image {
+				
+				margin: 0 auto; /* Center the image */
+    		}
+   
+	
+			}
 			
 		</style>
 	</head>

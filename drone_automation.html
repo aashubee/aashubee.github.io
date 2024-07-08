@@ -173,46 +173,55 @@
                     </div>
                     <h3>Design Overview</h3>
                     <p class="align-left">
-                        The design we ended up going with consisted of 3 main compoennts. The acrylic holding container to which had all our tennis ball packages, an indexing 
-                        system to load one ball in at a time, and the end-effector attatched to the drone allowing for easy pick-up. The hive itself provided
-                        a tricky problem for this, as we had to juggle the many prodtruding geometries of the back of the trailer. Primiarily, ensuring that the 
-                        drones were able to reach the exit point of the container would be the most diffuclt part, something we based our container deisgn off of.
+                        The design we ended up going with consisted of 3 main components. The acrylic holding container to which had all our tennis ball packages, an indexing 
+                        system to load one ball in at a time, and the end-effector attached to the drone allowing for easy pick-up. The hive itself provided
+                        a tricky problem for this, as we had to juggle the many protruding geometries of the back of the trailer. Primarily, ensuring that the 
+                        drones were able to reach the exit point of the container would be the most difficult part, something we based our container design off of.
                         The container was designed with the
-                        Hive in mind, allowing for easy removeability while still being fully supported by the trailer. Under, the indexing system was inspired by a ski-ball
-                        mechanism, utilzing simple servo control to ensure a single ball was deployed each time. The 3rd (and argueably coolest) mechanism was the end-effector,
-                        and all the wireless communiation that came with it. This was my part of the project, as we split up work early in the semester to ensure all aspects
+                        Hive in mind, allowing for easy removability while still being fully supported by the trailer. Under, the indexing system was inspired by a ski-ball
+                        mechanism, utilizing simple servo control to ensure a single ball was deployed each time. The 3rd (and arguably coolest) mechanism was the end-effector,
+                        and all the wireless communication that came with it. This was my part of the project, as we split up work early in the semester to ensure all aspects
                         that the company wanted would be delivered. 
                     </p>
                     <p class="align-left">
-                        Due to the limited time frame given to teams for the competitions,  having a fleshed-out design done as quickly as possible is extremely important. 
-                        After leading multiple meetings discussing our goals/priorities for the bot, we had a generic list of what our end goal should look like. I developed my 
-                        CAD skills the previous year by working on designing the 2021 robot, allowing me to spearhead the design for this year. 
-
-                        Starting with initial 2D side concept sketches, I then started CAD from the ground up. For 2022, our CAD team was severely limited compared to previous 
-                        years, so splitting up work was vital. I led both the shooter subsytem, and the drivetrain subsystem. Setting a deadline of 2 weeks, we managed to have 
-                        a full assembly of our robot (including fasteners).
+                       
                     </p>
                         
                     
                     <div class="gallery2">
                         <div class="gallery-item">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/H1aX_vVJq-M?feature=youtu.be" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <img src="images/FRC/full-robot.png" alt="Image 1">
+                        
                         </div>
                         <div class="gallery-item">
                             <img src="images/FRC/full-robot.png" alt="Image 1">
                         
                         </div>
                     </div>
-                    <h3>Mechanisms</h3>
-                    <p class = 'align-left'>Drivetrain:This year’s Drivetrain design is a 6-wheel “West Coast Drive,” equipped with Andymark Performance wheels in the center and Colson wheels on the side. With a WCP SS Gearbox, Hamazon is able to dash around the field very quickly and efficiently. Because of our team’s discussion during our Match Strategy meeting, we aimed to build a Drivetrain that would be able to play defense, (due to the defensive nature of this game), and be robust enough to survive a fall during the climb, both of which led us to this design. </p>
-                    <p class = 'align-left'>Shooter: The Shooter is equipped with dual 4’’ launch wheels capable of running at 5,000 RPM to consistently score in the UPPER HUB. 
-                        The Limelight is positioned at the front of the shooter to allow for precise shooting and positioning of the robot relative to the retroreflective tape
-                        The shooter is my favorite mechanism, since I was able to take it start to finish with many cool and new ideas for the team. The shooter had 2 massive 
-                        4 inch wheels in the front, with geometry that optimized the compression on the game pieces for shooting them out. There are also smaller "backspin wheels", 
-                        imperative to reduce the magnus effect that the balls would face when being shot. By adjusting the belt + gear ratio to allow the backspin wheels to have
-                         the same tip-speed as main wheels, I was able to eliminate the back-spin effect causing balls to be unpredictable. Modeling the shooter in Desmos also 
-                         allowed me to find optimal speeds given our geometry and the MOI we needed for our flywheel to give the consecutive balls the same power level when shot.
+                    <h3>Gripper</h3>
+                    <p class = 'align-left'>The gripper is the main mechanism that would interface the existing drones with our system. As a 
+                        proof of concept for the project, Sentien asked that we create enough for one drone, but design so it is interfaceable with
+                        any of them. When designing the gripper, there are a few
+                        main things I considered to ensure a smooth interface. 
                     </p>
+                    <ul class="align-left">
+                        <li> Wireless communication</li>
+                        <li> Balanced center of mass</li>
+                        <li> Low mass to allow drone to fly</li>
+                        <li> Interface with drone's communication system</li>
+                        <li> Easily interchangabel grippers for the future</li>
+                    </ul>
+                    <p class="align-left">
+                        Overall, the gripper was powered by a servo motor and a linkage system, translating rotational movement into translational. This allowed the gripper
+                        to close in on the payload, while keeping the design low-weight. To actually power the servo, I realized that the drone had extra PWM channels,
+                        so simply sending a signal through the drone would simplify the functionality. The drone also had onboard 5V, so the servo aspect was complete.
+                        In terms of Bluetooth communication, I used an HC-05 module to communicate with my computer, as to when to actually send in the PWM signal to open
+                        or close the gripper. Later on, this was automated so that whenever the payload was deployed, the gripper would automatically receive a wireless signal
+                        and close. My first design was very bulky, and enclosed many electronics in a box. After several design changes, I realized that it would be more efficient
+                        to house the electronics in the drone itself, simplifying packaging significantly.
+
+                    </p>
+                
                     <div class="gallery2">
                         <div class="gallery-item">
                             <img src="images/FRC/drivetrain.png" alt="Image 1">
@@ -223,24 +232,11 @@
                       
                         </div>
                     </div>
-                    <div class="gallery2">
-                        <div class="gallery-item">
-                            <img src="images/FRC/real-drivetrain.jpg" alt="Image 1">
-                         
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/FRC/intake-prototype.png" alt="Image 1">
-                            
-                        </div>
-                    </div>
-                    <h3>Manufacturing + Assembly</h3>
-                    <p class = 'align-left'>After the CAD was completed, manufacturing of many different parts began. All the sheet metal on our robot is completed by Magnus Hi-Tech, 
-                        a sponsor company that is able to plasma-cut, bend, and even powder coat our metal (Magnus spreadsheet). Everything else on the robot is 
-                        machined in-house through the use of the machines at our build space (lathes, mills, CNC routers & hand tools). Specifically, I utilized the CNC Router the
-                        most, for the complex geometries we needed to produce, especailly for early prototypes. After completing all 
-                        required in-house machining with an organizational spreadsheet, assembly was able to begin with the sheet metal parts. Using CAD as a reference, 
-                        assembly of the robot ran very smoothly. Originally starting with the drivetrain and working our way up, Hamazon's assembly was able to be completed 
-                        efficiently, leaving enough time for programmers and drive practice.</p>
+                    
+                    <h3>Final Presentation</h3>
+                    <p class = 'align-left'> After alot of visits to Sentien's HQ throughout the semester, we finally got ready to present out final deliverable. This included
+                        a live demo with the CEO and lead mechatronics engineer, along with the presentation attatched below.
+                    </p>
                     <div class="gallery2">
                         <div class="gallery-item">
                             <img src="images/FRC/real-indexer.jpg" alt="Image 1">
@@ -253,11 +249,13 @@
                         
                     </div>
                     <h3>Conclusion/Next Steps</h3>
-                    <p class = "align-left">Overall, this was one of my favorite engineering projects so far, being able to combine skills to create a very tangible and very successful robot. 
-                        As this was my senior year, I would not be able to compete in these competitions from the future, as FRC is only aimed for high-schoolers. That being said,
-                        I have ensured that the team will still go strong even after the current class graduates, by teaching and preparing the newer class in many technical and 
-                        soft skills. This, along with starting a proper documentation system (Part Spreadsheets, Tech Binders) ensured that not only was I able to have a successful 
-                        senior year building the robot, but that the team would have a good framework to continue in the following years!
+                    <p class = "align-left">
+                        Overall, this was one of my first college team engineering projects, and I am very happy to have been paired with a group of engineers with a diverse
+                        set of skills. Normally, our projects only last a semester, but Sentien Robotics enjoyed our work enough to hire 2 project teams the following semester!
+                        By working on a real world problem that a company might face/want to expand into, I was able to gain knowledge on how a project workflow should be maintained
+                        and also gain a cool project to add to my portfolio! If i could go back and visit, I would make certain design changes to our overall system. The next step
+                        I would look at is to use the same communication protocol the drone uses to fleet control for the gripper. Currently, there is an extra PCB module which
+                        allows me for serial communication. But, it would be more efficient to use the existing wireless communication to actuate the gripper.
                     </p>
                     <h3>Screenshots / Media</h3>
                     <div class="gallery2">
