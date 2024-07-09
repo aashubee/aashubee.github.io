@@ -3,8 +3,10 @@ Mobile Formatting
 - Try fixing skills formatting on mobile 
 - Try making the banners bigger for mobile too
 
+
 Resume
-- Add Download Button
+- Add Download Button [DONE]
+    - Check that it works on mobile
 
 Project Pages
 FRC
@@ -12,13 +14,15 @@ FRC
 - Maybe link for the part spreadsheet
 
 Drone Automation
-- Figure out if want to add final presentation
-- Still needs all images 
+- Figure out if want to add final presentation [DONE]
+- Still needs all images [DONE]
+    - JUST 1 MORE IMAGE
 
 Holy crab
 - Still need 2 more images
 - Try adding video of any fight
-- Include the design presentations, at least 1 of them
+- Include the design presentations, at least 1 of them [DONE]
+    - Fix formatting on mobile [DONE]
 
 ME 100
 - Add wording

@@ -132,11 +132,12 @@
             <section class="banner">
                 <h1>Skills used in this project</h1>
                 <ul class="skills">
-                    <li>Microcontroller</li>
-                    <li>Bluetooth</li>
+                    <li>Microcontroller (ESP32)</li>
+                    <li>Breadboarding</li>
+                    <li>Communication (MQTT)</li>
                     <li>CAD (Solidworks)</li>
-                    <li>3D Printing</li>
-                    <li>CNC Router</li>
+                    <li>Micropython</li>
+                    <li>Part Sourcing</li>
                     <li>Misc. Machining</li>
                 </ul>
             </section>
@@ -144,23 +145,26 @@
                 <div class="inner">
                     <h3>Project Overview</h3>
                     <p class="align-left">
-                        Me 100 [Inset sylabus link]
+                        <a href = "https://me.berkeley.edu/wp-content/uploads/2019/03/ME-100-rev-10.31.18.pdf"> ME 100</a> (Electronics for the Internet of Things) is one of the many 
+                        Mechanical Engineering upper division classes that caught my attention at Berkeley. 
+                        The class taught students how to combine there knowledge of Mechanical Engineering with IoT and EE capabilities, allowing for actuation and smart 
+                        products. The material in the class was very interesting, and this combined with the weekly labs in Micro python + ESP32 Microcontrollers made it a 
+                        worthwhile class. More importantly, ME 100 has a large final project, meant to be worked on for the second half of the semester. Besides a few basic 
+                        requirements (such as at least 1 sensor, at least 1 actuation etc), the project and its scope was completely up to students.
+
                     </p>
                     <p class="align-left">
-                        Our specific project was based on expanding the capabilities of the hive, moving into payload delivery
-                        My team was tasked with 
-                        creating an efficient storage and payload indexing system for the 
-                        Hive, along with designing the 
-                        end-effector for drones to carry the sorted packages.
-                        Given a semester, access to the HiveXL and all its components, we had to protype and build a proof of concept on how the payload delivery would look on these
-                        hive machines. In the first use-case the company wanted to try simple "tennis ball" style packages, a placeholder for fertilizer
-                        packages to efficiently plant an entire field!
+                        Me and my partner wanted to pursue an ambitious but still interesting project. We started our initial brainstorming, and realized ended choosing the 
+                        idea that we completed the class with. This was the "Automatic Fire Suspension System," a smart device that would be able to detect fires and spray 
+                        them with flame retardant. Using KY-026 Sensors, an ESP32 for control, and multiple methods of actuation, we were able to complete out first prototype 
+                        and automatically put out a lighter flame!
+
                     </p>
                     <h1 style="text-align: center;">Image Gallery</h1>
                     <div class="gallery1">
                         
                         <div class="gallery-item">
-                            <img src="images/FRC/real-robot.jpg" alt="Image 2">
+                            <img src="images/ME100/sidewaysreal.jpg" alt="Image 2">
                             
                         </div>
                         
@@ -168,103 +172,96 @@
                     </div>
                     <h3>Design Overview</h3>
                     <p class="align-left">
-                        The design we ended up going with consisted of 3 main components. The acrylic holding container to which had all our tennis ball packages, an indexing 
-                        system to load one ball in at a time, and the end-effector attached to the drone allowing for easy pick-up. The hive itself provided
-                        a tricky problem for this, as we had to juggle the many protruding geometries of the back of the trailer. Primarily, ensuring that the 
-                        drones were able to reach the exit point of the container would be the most difficult part, something we based our container design off of.
-                        The container was designed with the
-                        Hive in mind, allowing for easy removability while still being fully supported by the trailer. Under, the indexing system was inspired by a ski-ball
-                        mechanism, utilizing simple servo control to ensure a single ball was deployed each time. The 3rd (and arguably coolest) mechanism was the end-effector,
-                        and all the wireless communication that came with it. This was my part of the project, as we split up work early in the semester to ensure all aspects
-                        that the company wanted would be delivered. 
+                        As seen in the design visualization below, the project consisted of inputs that would trigger some response from the system. 
+                        In this case, we would receive an input from one of the 4 flame sensors (KY-026 Sensors), which could detect wavelengths that fires emit,
+                         and outputs a HIGH or LOW signal based on its reading. We then used a DC motor, calculating the need for an 18:80 ratio to achieve the torque
+                        needed to spin the flame retardant spray to the correct quadrant. By placing bearings all around our main pulley, we were able to both constrain
+                       the container and reduce the friction the heavy system would have when turning. After determining that the flame retardant was aimed at the correct 
+                       spray, we actuated our servo to trigger the spray, shooting at the fire until no more flame was detected. To meet the IOT requirements, we 
+                       then configured a server to send data over through MQTT protocols, to display on a users phone whenever a flame was detected, and when it 
+                       was put out.
                     </p>
                     <p class="align-left">
                        
                     </p>
                         
                     
-                    <div class="gallery2">
+                    <div class="gallery1">
                         <div class="gallery-item">
-                            <img src="images/FRC/full-robot.png" alt="Image 1">
+                            <img src="images/ME100/DesignVisualization.png" alt="Image 1">
                         
                         </div>
-                        <div class="gallery-item">
-                            <img src="images/FRC/full-robot.png" alt="Image 1">
                         
-                        </div>
                     </div>
-                    <h3>Gripper</h3>
-                    <p class = 'align-left'>The gripper is the main mechanism that would interface the existing drones with our system. As a 
-                        proof of concept for the project, Sentien asked that we create enough for one drone, but design so it is interfaceable with
-                        any of them. When designing the gripper, there are a few
-                        main things I considered to ensure a smooth interface. 
-                    </p>
-                    <ul class="align-left">
-                        <li> Wireless communication</li>
-                        <li> Balanced center of mass</li>
-                        <li> Low mass to allow drone to fly</li>
-                        <li> Interface with drone's communication system</li>
-                        <li> Easily interchangabel grippers for the future</li>
-                    </ul>
-                    <p class="align-left">
-                        Overall, the gripper was powered by a servo motor and a linkage system, translating rotational movement into translational. This allowed the gripper
-                        to close in on the payload, while keeping the design low-weight. To actually power the servo, I realized that the drone had extra PWM channels,
-                        so simply sending a signal through the drone would simplify the functionality. The drone also had onboard 5V, so the servo aspect was complete.
-                        In terms of Bluetooth communication, I used an HC-05 module to communicate with my computer, as to when to actually send in the PWM signal to open
-                        or close the gripper. Later on, this was automated so that whenever the payload was deployed, the gripper would automatically receive a wireless signal
-                        and close. My first design was very bulky, and enclosed many electronics in a box. After several design changes, I realized that it would be more efficient
-                        to house the electronics in the drone itself, simplifying packaging significantly.
-
-                    </p>
-                
+                    
                     <div class="gallery2">
                         <div class="gallery-item">
-                            <img src="images/FRC/drivetrain.png" alt="Image 1">
-                     
+                            <img src="images/ME100/fullassembly2.png" alt="Image 1">
+                        
                         </div>
                         <div class="gallery-item">
-                            <img src="images/FRC/shooter.png" alt="Image 1">
-                      
+                            <img src="images/ME100/fullassembly.png" alt="Image 1">
+                        
                         </div>
                     </div>
                     
-                    <h3>Final Presentation</h3>
-                    <p class = 'align-left'> After alot of visits to Sentien's HQ throughout the semester, we finally got ready to present out final deliverable. This included
-                        a live demo with the CEO and lead mechatronics engineer, along with the presentation attatched below.
+                    <h3>Midterm Presentation</h3>
+                    <p class = 'align-left'> 
+                        At the beginning of our project, we presented a midterm presentation of our ideas and how we would achieve the specified
+                        requirements for the project.
+                        
                     </p>
-                    <div class="gallery2">
-                        <div class="gallery-item">
-                            <img src="images/FRC/real-indexer.jpg" alt="Image 1">
-                          
+                    <div class="gallery1">
+                        <div class="inner">
+                            <iframe class="pdf" 
+                                    src= "images/ME100/ME100 Checkoff Slides.pdf"
+                                width="700" height="400">
+                            </iframe>
+                            
                         </div>
-                        <div class="gallery-item">
-                            <img src="images/FRC/real-intake.png" alt="Image 1">
-                          
+                        
+                    </div>
+
+
+                    <h3>Final Presentation</h3>
+                    <p class = 'align-left'> After a lot of hours programming, building and testing, we created a final presentation to best showcase all of our work. This was 
+                        the culmination of our grade this semester, and for this project me and partner both received a 100!
+
+                    </p>
+                    <div class="gallery1">
+                        <div class="inner">
+                            <iframe class="pdf" 
+                                    src= "images/ME100/Automatic Fire Suppression System ME100.pdf"
+                                width="700" height="400">
+                            </iframe>
+                            
                         </div>
                         
                     </div>
                     <h3>Conclusion/Next Steps</h3>
                     <p class = "align-left">
-                        Overall, this was one of my first college team engineering projects, and I am very happy to have been paired with a group of engineers with a diverse
-                        set of skills. Normally, our projects only last a semester, but Sentien Robotics enjoyed our work enough to hire 2 project teams the following semester!
-                        By working on a real world problem that a company might face/want to expand into, I was able to gain knowledge on how a project workflow should be maintained
-                        and also gain a cool project to add to my portfolio! If i could go back and visit, I would make certain design changes to our overall system. The next step
-                        I would look at is to use the same communication protocol the drone uses to fleet control for the gripper. Currently, there is an extra PCB module which
-                        allows me for serial communication. But, it would be more efficient to use the existing wireless communication to actuate the gripper.
+                        This project was a great way to combine all the concepts we learned about throughout the semester, and see it in a tangible result. 
+                        It was interesting working this project along with all other deadlines we have in a semester, but as long as time is managed properly, 
+                        anything would be possible. In terms of next steps, I would love to continue refining this project, especially new parts that we did not 
+                        have time for in the semester. For example, I started work on an unimplemented wiggle feature, to basically continuously spray and change 
+                        angle/position to take on larger flames. Another possible improvement would be a way to track how much of the flame retardant is left, based 
+                        on amount of time/number of uses previously. These combined with the existing system allows for an efficient fire suppression system that 
+                        I was able to learn a lot from!
                     </p>
                     <h3>Screenshots / Media</h3>
                     <div class="gallery2">
                         <div class="gallery-item">
-                            <img src="images/FRC/shooting.png" alt="Image 1">
+                            <img src="images/ME100/realwithwires.jpg" alt="Image 1">
                           
                         </div>
                         <div class="gallery-item">
-                            <img src="images/FRC/compilation.png" alt="Image 1">
+                            <img src="images/ME100/topview.jpg" alt="Image 1">
                           
                         </div>
                     </div>
                     <h2 class="align-center" style="margin-top: 10px; margin-bottom: 10px;">
-                        <a href="projects.html">See All Projects</a>
+                        <a href="projects.html" class="button">See All Projects</a></li>
+                       
                     </h2>
                 </div>
             </section>

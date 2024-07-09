@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Aashrith -[INSERT]</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: left;
+        }
+        .gallery1 {
+            display: grid;
+            flex-wrap: nowrap; /* Prevent wrapping */
+            grid-template-columns: repeat(1, 1fr); /* Fixed 3 columns */
+            justify-content: center;
+            margin: 20px;
+            overflow-x: auto; /* Enable horizontal scrolling if needed */
+        }
+        .gallery2 {
+            display: grid;
+            flex-wrap: nowrap; /* Prevent wrapping */
+            grid-template-columns: repeat(2, 1fr); /* Fixed 3 columns */
+            justify-content: center;
+            margin: 20px;
+            overflow-x: auto; /* Enable horizontal scrolling if needed */
+        }
+        .gallery3 {
+            display: grid;
+            flex-wrap: nowrap; /* Prevent wrapping */
+            grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
+            justify-content: center;
+            margin: 20px;
+            overflow-x: auto; /* Enable horizontal scrolling if needed */
+        }
+        @media screen and (max-width: 736px) {
+
+            .gallery2 {
+                grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
+            }
+            .gallery3{
+                flex-wrap: wrap;
+            }
+
+            }
+        .gallery-item {
+            margin: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            flex: 0 0 auto; /* Ensure items don't shrink */
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .gallery-item p {
+            padding: 15px;
+            margin: 0;
+            text-align: center;
+            font-size: 14px;
+        }
+        .banner {
+            background: linear-gradient(to right, #171718, #0f2b86);
+            padding: 20px;
+            text-align: center;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .skills li {
+            background: #000000;
+            border-radius: 25px; /* Rounded rectangle */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 10px;
+            padding: 20px;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            width: 150px; /* Make it longer */
+            height: 70px; /* Adjust the height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+        .skills li:hover {
+            transform: scale(1.1);
+        }
+        .skills li i {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #4facfe;
+        }
+        .skills li span {
+            margin-left: 10px; /* Space between icon and text */
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">Aashrith</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="resume.html">Resume</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <article id="main">
+            <header>
+                <h2>Template</h2>
+                <p>Template</p>
+            </header>
+            <!-- Banner -->
+            <section class="banner">
+                <h1>Skills used in this project</h1>
+                <ul class="skills">
+                    <li>Microcontroller</li>
+                    <li>Bluetooth</li>
+                    <li>CAD (Solidworks)</li>
+                    <li>3D Printing</li>
+                    <li>CNC Router</li>
+                    <li>Misc. Machining</li>
+                </ul>
+            </section>
+            <section class="wrapper style5">
+                <div class="inner">
+                    <h3>Project Overview</h3>
+                    <p class="align-left">
+                        Template
+                    </p>
+                    <p class="align-left">
+                        Template
+                    </p>
+                    <h1 style="text-align: center;">Image Gallery</h1>
+                    <div class="gallery1">
+                        
+                        <div class="gallery-item">
+                            <img src="images/FRC/real-robot.jpg" alt="Image 2">
+                            
+                        </div>
+                        
+                        <!-- Add more images as needed -->
+                    </div>
+                    <h3>Design Overview</h3>
+                    <p class="align-left">
+                       Template
+                    </p>
+                    <p class="align-left">
+                       
+                    </p>
+                        
+                    
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/FRC/full-robot.png" alt="Image 1">
+                        
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/FRC/full-robot.png" alt="Image 1">
+                        
+                        </div>
+                    </div>
+                    <h3>Template</h3>
+                    <p class = 'align-left'>Template
+                    </p>
+                    
+                    <p class="align-left">
+                        Template
+
+                    </p>
+                
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/FRC/drivetrain.png" alt="Image 1">
+                     
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/FRC/shooter.png" alt="Image 1">
+                      
+                        </div>
+                    </div>
+                    
+                    <h3>Final Presentation</h3>
+                    <p class = 'align-left'> After alot of visits to Sentien's HQ throughout the semester, we finally got ready to present out final deliverable. This included
+                        a live demo with the CEO and lead mechatronics engineer, along with the presentation attatched below.
+                    </p>
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/FRC/real-indexer.jpg" alt="Image 1">
+                          
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/FRC/real-intake.png" alt="Image 1">
+                          
+                        </div>
+                        
+                    </div>
+                    <h3>Conclusion/Next Steps</h3>
+                    <p class = "align-left">
+                        Template
+                    </p>
+                    <h3>Screenshots / Media</h3>
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/FRC/shooting.png" alt="Image 1">
+                          
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/FRC/compilation.png" alt="Image 1">
+                          
+                        </div>
+                    </div>
+                    <h2 class="align-center" style="margin-top: 10px; margin-bottom: 10px;">
+                        <a href="projects.html" class="button">See All Projects</a></li>
+                       
+                    </h2>
+                </div>
+            </section>
+        </article>
+        
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="copyright">
+                <li>&copy;Aashrith Beesabathuni</li>
+            </ul>
+        </footer>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

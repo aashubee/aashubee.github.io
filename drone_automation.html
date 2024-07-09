@@ -38,6 +38,16 @@
             margin: 20px;
             overflow-x: auto; /* Enable horizontal scrolling if needed */
         }
+        @media screen and (max-width: 736px) {
+
+        .gallery2 {
+            grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
+        }
+        .gallery3{
+            flex-wrap: wrap;
+        }
+
+        }
         .gallery-item {
             margin: 10px;
             background-color: #fff;
@@ -165,7 +175,7 @@
                     <div class="gallery1">
                         
                         <div class="gallery-item">
-                            <img src="images/FRC/real-robot.jpg" alt="Image 2">
+                            <img src="images/Sentien/dronecloseup.jpg" alt="Image 2">
                             
                         </div>
                         
@@ -190,11 +200,11 @@
                     
                     <div class="gallery2">
                         <div class="gallery-item">
-                            <img src="images/FRC/full-robot.png" alt="Image 1">
+                            <img src="images/Sentien/indexer.png" alt="Image 1">
                         
                         </div>
                         <div class="gallery-item">
-                            <img src="images/FRC/full-robot.png" alt="Image 1">
+                            <img src="images/Sentien/dronewithindexer.jpg" alt="Image 1">
                         
                         </div>
                     </div>
@@ -224,11 +234,11 @@
                 
                     <div class="gallery2">
                         <div class="gallery-item">
-                            <img src="images/FRC/drivetrain.png" alt="Image 1">
+                            <img src="images/Sentien/grippercloseup.jpg" alt="Image 1">
                      
                         </div>
                         <div class="gallery-item">
-                            <img src="images/FRC/shooter.png" alt="Image 1">
+                            <img src="images/Sentien/oldgripper.jpg" alt="Image 1">
                       
                         </div>
                     </div>
@@ -237,14 +247,13 @@
                     <p class = 'align-left'> After alot of visits to Sentien's HQ throughout the semester, we finally got ready to present out final deliverable. This included
                         a live demo with the CEO and lead mechatronics engineer, along with the presentation attatched below.
                     </p>
-                    <div class="gallery2">
-                        <div class="gallery-item">
-                            <img src="images/FRC/real-indexer.jpg" alt="Image 1">
-                          
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/FRC/real-intake.png" alt="Image 1">
-                          
+                    <div class="gallery1">
+                        <div class="inner">
+                            <iframe class="pdf" 
+                                    src= "images/Sentien/Sentien 2 Final Presentation .pdf"
+                                width="700" height="400">
+                            </iframe>
+                            
                         </div>
                         
                     </div>
@@ -260,16 +269,18 @@
                     <h3>Screenshots / Media</h3>
                     <div class="gallery2">
                         <div class="gallery-item">
-                            <img src="images/FRC/shooting.png" alt="Image 1">
+                            <img src="images/Sentien/teampic.jpg" alt="Image 1" >
                           
                         </div>
                         <div class="gallery-item">
-                            <img src="images/FRC/compilation.png" alt="Image 1">
+                            <img src="images/Sentien/teampic.jpg" alt="Image 1" >
                           
                         </div>
+                    
                     </div>
                     <h2 class="align-center" style="margin-top: 10px; margin-bottom: 10px;">
-                        <a href="projects.html">See All Projects</a>
+                        <a href="projects.html" class="button">See All Projects</a></li>
+                       
                     </h2>
                 </div>
             </section>
