@@ -38,6 +38,16 @@
             margin: 20px;
             overflow-x: auto; /* Enable horizontal scrolling if needed */
         }
+        @media screen and (max-width: 736px) {
+
+        .gallery2 {
+            grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
+        }
+        .gallery3{
+            flex-wrap: wrap;
+        }
+
+        }
         .gallery-item {
             margin: 10px;
             background-color: #fff;

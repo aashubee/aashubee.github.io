@@ -22,10 +22,11 @@
             margin: 20px;
             overflow-x: auto; /* Enable horizontal scrolling if needed */
         }
+        
         .gallery2 {
             display: grid;
-            flex-wrap: nowrap; /* Prevent wrapping */
-            grid-template-columns: repeat(2, 1fr); /* Fixed 3 columns */
+           
+            grid-template-columns: 1fr 1fr;
             justify-content: center;
             margin: 20px;
             overflow-x: auto; /* Enable horizontal scrolling if needed */
@@ -37,6 +38,16 @@
             justify-content: center;
             margin: 20px;
             overflow-x: auto; /* Enable horizontal scrolling if needed */
+        }
+        @media screen and (max-width: 736px) {
+
+            .gallery2 {
+                grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
+            }
+            .gallery3{
+                flex-wrap: wrap;
+            }
+
         }
         .gallery-item {
             margin: 10px;
@@ -76,11 +87,11 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             margin: 10px;
             padding: 20px;
-            display: inline-block;
-            font-size: 16px;
+        
+            font-size: auto;
             font-weight: bold;
-            width: 150px; /* Make it longer */
-            height: 70px; /* Adjust the height */
+            width: calc(50%-40px);
+            height: auto;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -193,16 +204,16 @@
                     
                     <div class="gallery2">
                         <div class="gallery-item">
-                            <img src="images/pic02.jpg" alt="Image 1">
+                            <img src="images/CR@B/robotside.png" alt="Image 1">
                      
                         </div>
                         <div class="gallery-item">
-                            <img src="images/pic03.jpg" alt="Image 1">
+                            <img src="images/CR@B/robotrender.png" alt="Image 1">
                       
                         </div>
                     </div>
                     
-                    <h3>Challeneges</h3>
+                    <h3>Challenges</h3>
                     <p>One Specific challenge I would like to highlight was that with our weapon. Our weapon was manufactured out of S7 Tool Steel (Fun Fact: This was manufactured
                         from the same company that creates GLITCH's huge eggbeater weapon), the same steel used to manufacture drill bits and other metal tools. As mentioned,
                         we used a previous robot's weapon to save on cost that could be put into other aspects, but still ensured our design fit around these constraints. Unfortunately, 
@@ -215,6 +226,18 @@
                         as we planned it to be. This approach worked, and by carefully trying to understand where the root cause was before making any decisions, we were able to get the best part
                         of our robot back in action.
                     </p>
+                    <div class="gallery1">
+                        <div class="inner">
+                            <iframe class="pdf" 
+                                    src= "images/CR@B/HOLY CR@B!! Design Review 3.pdf"
+                                width="700" height="400">
+                            </iframe>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                        
                     
                         <h3>Outcome and Achievements</h3>
                     <p>At the Sacremento Bot Battles 2023, HOLY CR@B !! went on to win second place at the competition, loosing the last match due to a bad battery connection. 
