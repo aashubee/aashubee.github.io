@@ -3,6 +3,10 @@ Mobile Formatting
 - Try fixing skills formatting on mobile 
 - Try making the banners bigger for mobile too
 
+FOR PUBLICATION:
+ADD 2 pics to HOLT CRAB thats it
+ADD 1 pic for drone automation
+
 
 Resume
 - Add Download Button [DONE]
@@ -25,9 +29,10 @@ Holy crab
     - Fix formatting on mobile [DONE]
 
 ME 100
-- Add wording
-- Add final presentation (see if its nice)
-- Add pictures
+- Add wording [DONE]
+- Add final presentation (see if its nice) [DONE]
+- Add pictures [DONE]
+- Add video
 
 Spotify Muse
 - Add wording
