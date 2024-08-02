@@ -105,6 +105,7 @@ body.is-mobile #main > header {
 
 
 
+
 #two .wrapper.alt.style2 .spotlight:hover {
     background: rgba(0, 123, 255, 0.8); /* New background color on hover */
     color: #fff; /* Text color on hover */
@@ -2909,13 +2910,13 @@ input, select, textarea {
 
 		.spotlight:nth-child(1) {
 			background-color: rgba(0, 0, 0, 0.15);
-			flex-direction: row-reverse;
+			
 			transition: background-color 0.7s ease, color 0.7s ease, transform 0.7s ease;
 			margin-bottom: 20px;
 		}
 		.spotlight:nth-child(1):hover {
 			background: #0a2747;
-			flex-direction: row-reverse;
+			
 			transition: background-color 0.6s ease, transform 0.6s ease; 
 			transform: scale(1.05);
 		}
