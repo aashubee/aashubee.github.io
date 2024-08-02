@@ -92,33 +92,56 @@ body.is-mobile #main > header {
 
 
 
-
-/* main page hover effect chatgpt
-*/
-.hover-expand {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+/* Add spacing between spotlight sections */
+#two .wrapper.alt.style2 .spotlight {
+    display: flex;
+    flex: 1 1 calc(50% - 20px); /* Adjusts the flex basis to ensure proper spacing */
+    margin: 20px; /* Add margin to create spacing */
+    background: rgb(255, 2, 2); /* Optional: Add some background color for better visibility */
+    padding: 20px;
+    border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
-.hover-expand:hover {
-    transform: scale(1.05);
+
+
+#two .wrapper.alt.style2 .spotlight:hover {
+    background: rgba(0, 123, 255, 0.8); /* New background color on hover */
+    color: #fff; /* Text color on hover */
 }
 
-.spotlight {
-    transition: transform 0.3s ease; /* For a smooth scale transition */
+/* Ensure the spotlight sections stretch across the screen */
+#two .wrapper.alt.style2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+	margin: 30px;
 }
 
-.spotlight .image img {
+
+#two .wrapper.alt.style2 .spotlight .image,
+#two .wrapper.alt.style2 .spotlight .content {
+    flex: 1;
+}
+
+#two .wrapper.alt.style2 .spotlight .image img {
     width: 100%;
     height: auto;
-    transition: transform 0.3s ease;
+    border-radius: 10px;
 }
 
-.spotlight:hover .image img {
-    transform: scale(1.05);
+/* Adjust the spotlight section for smaller screens */
+@media screen and (max-width: 980px) {
+    #two .wrapper.alt.style2 .spotlight {
+        flex: 1 1 100%;
+        margin: 20px 0; /* Adjust margin for narrower screens */
+    }
 }
+
+
+
 
 /*chatpgt logos 
 */
@@ -2885,11 +2908,21 @@ input, select, textarea {
 		}
 
 		.spotlight:nth-child(1) {
-			background-color: rgba(0, 0, 0, 0.075);
+			background-color: rgba(0, 0, 0, 0.15);
+			flex-direction: row-reverse;
+			transition: background-color 0.7s ease, color 0.7s ease, transform 0.7s ease;
+			margin-bottom: 20px;
+		}
+		.spotlight:nth-child(1):hover {
+			background: #0a2747;
+			flex-direction: row-reverse;
+			transition: background-color 0.6s ease, transform 0.6s ease; 
+			transform: scale(1.05);
 		}
 
 		.spotlight:nth-child(2) {
 			background-color: rgba(0, 0, 0, 0.15);
+			
 		}
 
 		.spotlight:nth-child(3) {
@@ -3329,6 +3362,32 @@ input, select, textarea {
 			color: #4E4852;
 		}
 
+		/* Ensure the heading stretches across the screen with different background color and bigger text */
+.wrapper-style-5 {
+    background-color: #333; /* Change to your desired background color */
+    padding: 20px 0; /* Optional: Add padding to the top and bottom */
+    text-align: center;
+}
+
+.wrapper-style-5 .inner {
+    width: 100%;
+}
+
+.wrapper-style-5 h2 {
+    color: #fff; /* Change to your desired text color */
+    font-size: 2em; /* Increase the font size */
+    margin: 0; /* Ensure no margin around the heading */
+    padding: 10px 20px; /* Optional: Add padding inside the heading */
+    background-color: #444; /* Change to your desired inner background color for contrast */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+}
+
+/* Adjust for smaller screens */
+@media screen and (max-width: 980px) {
+    .wrapper-style-5 h2 {
+        font-size: 1.5em;
+    }
+}
 			.wrapper.style5 strong, .wrapper.style5 b {
 				color: #2E3842;
 			}
@@ -4185,3 +4244,5 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
+	
