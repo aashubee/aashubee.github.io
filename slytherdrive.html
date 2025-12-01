@@ -1,0 +1,322 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Aashrith - SlytherDrive</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .project-page header { text-align: center; }
+        .project-page h2 { letter-spacing: 0.14em; }
+        .project-page p { color: #111; line-height: 1.75; }
+
+        .banner {
+            background: linear-gradient(180deg, rgba(13, 35, 26, 0.9), rgba(12, 21, 20, 0.94));
+            padding: 24px 16px;
+            text-align: center;
+            border-top: 1px solid var(--accent-soft);
+            border-bottom: 1px solid var(--accent-soft);
+        }
+
+        .banner h1 {
+            margin-bottom: 0.8em;
+            letter-spacing: 0.12em;
+            color: #f5f7f6;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8em;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .skills li {
+            background: rgba(52, 210, 127, 0.14);
+            border: 1px solid var(--accent-soft);
+            border-radius: 999px;
+            padding: 0.6em 1em;
+            color: #e7f5ee;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+            box-shadow: none;
+        }
+
+        .gallery1,
+        .gallery2,
+        .gallery3,
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 14px;
+            margin: 20px 0;
+        }
+
+        .gallery2 {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .gallery3 {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        .gallery-item,
+        .gallery-card {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            overflow: visible;
+            box-shadow: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75em;
+        }
+
+        .gallery-item img,
+        .gallery-card img {
+            width: auto;
+            max-width: 100%;
+            max-height: 320px;
+            object-fit: contain;
+            display: block;
+            padding: 0;
+            border: 2px solid var(--accent);
+            border-radius: 8px;
+        }
+
+        .rotate-90 {
+            transform: rotate(90deg);
+            transform-origin: center;
+        }
+
+        @media screen and (max-width: 736px) {
+            .gallery-item img,
+            .gallery-card img {
+                max-height: none;
+            }
+        }
+
+        .pdf {
+            border: none;
+            width: 100%;
+            height: 420px;
+        }
+
+        .pdf-card {
+            background: rgba(17, 33, 31, 0.85);
+            border: 1px solid var(--accent-soft);
+            border-radius: 12px;
+            padding: 1em;
+            box-shadow: 0 14px 30px rgba(0,0,0,0.32);
+            text-align: center;
+            margin: 1.2em 0;
+        }
+
+        .project-video {
+            margin: 1em 0 2em;
+            text-align: center;
+        }
+
+.project-video video {
+            width: 100%;
+            max-width: 900px;
+            border: 2px solid var(--accent);
+            border-radius: 10px;
+            background: #000;
+        }
+
+        .project-hero-title {
+            background: #304c3f;
+            padding: 2.8em 1.5em 2.2em;
+            text-align: center;
+            border-bottom: 1px solid var(--accent-soft);
+        }
+
+        .project-hero-title h2 {
+            margin: 0 0 0em 0 !important;
+            font-size: 2.6em;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            color: #f5f5f5;
+        }
+
+        .project-hero-title .subtitle {
+            margin: -0.35em 0 0 0 !important;
+            font-size: 1.1em;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: #7a7a7a !important;
+        }
+
+        
+    </style>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+        <header id="header">
+            <h1><a href="index.html">Aashrith</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="resume.html">Resume</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <article id="main" class="project-page">
+            <header class="project-hero-title">
+                <h2>[WIP] SlytherDrive</h2>
+                <p class="subtitle">Bio-inspired Snake Robot</p>
+            </header>
+
+            <section class="banner">
+                <h1>Skills used in this project</h1>
+                <ul class="skills">
+                    <li>Motor Control</li>
+                    <li>Robotic Sim</li>
+                    <li>Controls</li>
+                    <li>Biomechanics</li>
+                </ul>
+            </section>
+
+            <section class="wrapper style5">
+                <div class="inner">
+                    <h3>Project Overview</h3>
+                    <p class="align-left">
+                        SlytherDrive was a bio-inspired robotics snake design, utilizing a hybrid rigid-soft design to acheive snake slithering locomotion.
+                        As a final project for my Robotic Locomotion class, our group chose an ambitious project, and focusssed heavily on the mechanics 
+                        behind getting a robot like this to actuate. Over the course of the semester, we researched, designed, and implemented this snake robot
+                        to understand how the ground reaction forces, contact forces, and segment coordintaion would allow a snake to move. 
+                    </p>
+
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/ME139/fullsnake.jpg" alt="Placeholder render" class="rotate-90">
+                        </div>
+                    </div>
+
+                    <h3>Snake Biomechanic Research</h3>
+                    <p class="align-left">
+                        The first step was research on how a real snake is able to actuate. Throughout the papers we read, we discovered 4 main ways of serpentine 
+                        motion. Lateral Undulation, rectilinar, concertina, and sidewining (the movement we attempted to replicate, and the most commonly seen with snakes).
+                        After researching multiple robotic snake papers too, we found that the main driving force that propels the snake is the anisotoropic (or unequal)
+                        friction on the bottom scales of the snake. Due to a higher coeffeicnet of fricition in the sideways direction compared to the forward component, 
+                        the snake is able to acheive forward motion by simply propogating a sinusodial wave throughout its body. 
+                    </p>
+
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/ME139/sidewining.gif" alt="Placeholder render">
+                        </div>
+                    </div>
+
+                    <h3>Design Approach</h3>
+                    <p class="align-left">
+                        One of the papers we came across offered an interesting way to acheive locomotion, one that we combined with our anisotoropic friction
+                        scale idea. Researchers exploited the idea of an uneven distribtuion of ground contact forces, by leaving an upwards +Z tension
+                        throughout the body of the snake. By using poly-urtherane blocks between each segment, the researchers were able to replicate
+                        snake locomotion by creating an uneven ground distriction force, and let compliance determine where the snake actually made contact with the
+                        ground to push itself forward. By creating blocks to only let certain regions of the snake touch the ground,
+                        we aimed to create the same uneven friciton profile real snakes use for sidewining motion. This combined with our (more ambitious) anisotoropic scales
+                        would allow us to create a robotic snake able to push itself forward, acheving locomotion. 
+                    </p>
+
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/ME139/snake_segment.jpg" alt="Placeholder render">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/ME139/sims_initial.png" alt="Placeholder prototype">
+                        </div>
+                    </div>
+
+                    <h3>Simulation</h3>
+                    <p class="align-left">
+                        I was in charge of the simulation, and being able to prove that this idea of a non-uniform ground contact force would result in forward locomotion.
+                        I chose to simulate the snake through PyBullet, and as someone who had never used this library before, there was a steep learning curve before any progress was made.
+                        I was able to finally simualte the snake, with nothing more than 16 rigid links, employing the estimated mass and size that we would evenutally build. I also
+                        added the uniform +Z tension, as discussed in the paper and, the anisotoropic friciton that allows the snake to have an unven ground distribution force during movmenet. 
+                        From there, it was simply adjusting each joint at any time step with a sin function, adjusting the angular velocity and amplitude accordingly to get 
+                        the best forward locomotion. 
+                        
+                    </p>
+
+                    <div class="project-video">
+                        <video controls preload="metadata" playsinline>
+                            <source src="images/ME139/snake_initial_sim.mov" type="video/mp4">
+                            <source src="images/ME139/snake_initial_sim.mov" type="video/quicktime">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p style="margin-top: 0.5em; color: #d7dbdd; font-size: 0.9em;">If the video does not load, download it <a href="images/ME139/snake_initial_sim.mov" style="border-bottom: 1px dotted var(--accent);">here</a>.</p>
+                    </div>
+
+                    <h3>Milestones</h3>
+                    <p class="align-left">
+                        Attathced are the progress milestones throughout the semester. We were instructed to make 3-4 slides per each checkpoint, highlighting what 
+                        progress was made each time. We can also see how the project has evovled, with our earlist checkpoint showcasing that we would go down
+                        the soft robotics route. Due to time constraints and unfamiliaty, we eventually pivoted to the current rigid-soft snake you see today.
+                        
+                    </p>
+                    <div class="gallery1">
+                        <div class="inner">
+                            <iframe class="pdf" 
+                                    src= "images/ME139/G24_Slytherdrive.pdf"
+                                width="700" height="400">
+                            </iframe>
+                            <iframe class="pdf" 
+                                    src= "images/ME139/G24_Slytherdrive (Presentation 2).pdf"
+                                width="700" height="400">
+                            </iframe>
+                            
+                        </div>
+                        
+                    </div>
+                    
+
+
+                    <h3>Outcome</h3>
+                    <p class="align-left">
+                        As of the last update (11/25) We have finished our printing for the snake, and have initial assembly complete. We are 
+                        now in the process of integration, using our knowledge from the sims and class to begin sin modulation on one of the segments.
+                        I will update this page as we get closer to completion, and a moving snake!
+                    </p>
+
+                    <div class="align-center" style="margin-top: 70px; margin-bottom: 0;">
+                        <ul class="actions special stacked-mobile cta-buttons">
+                            <li><a href="projects.html" class="button primary">See All Projects</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <footer id="footer">
+            <ul class="copyright">
+                <li>&copy;Aashrith Beesabathuni</li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

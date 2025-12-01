@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Aashrith - NASA Intellignet Machine Monitoring</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .project-page header { text-align: center; }
+        .project-page h2 { letter-spacing: 0.14em; }
+        .project-page p { color: #111; line-height: 1.75; }
+
+        .banner {
+            background: linear-gradient(180deg, rgba(13, 35, 26, 0.9), rgba(12, 21, 20, 0.94));
+            padding: 24px 16px;
+            text-align: center;
+            border-top: 1px solid var(--accent-soft);
+            border-bottom: 1px solid var(--accent-soft);
+        }
+
+        .banner h1 {
+            margin-bottom: 0.8em;
+            letter-spacing: 0.12em;
+            color: #f5f7f6;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8em;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .skills li {
+            background: rgba(52, 210, 127, 0.14);
+            border: 1px solid var(--accent-soft);
+            border-radius: 999px;
+            padding: 0.6em 1em;
+            color: #e7f5ee;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+            box-shadow: none;
+        }
+
+        .gallery1,
+        .gallery2,
+        .gallery3,
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 14px;
+            margin: 20px 0;
+        }
+
+        .gallery2 {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .gallery3 {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        .gallery-item,
+        .gallery-card {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            overflow: visible;
+            box-shadow: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75em;
+        }
+
+        .gallery-item img,
+        .gallery-card img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            object-fit: contain;
+            display: block;
+            padding: 0;
+            border: 2px solid var(--accent);
+            border-radius: 8px;
+        }
+
+        @media screen and (max-width: 736px) {
+            .gallery-item img,
+            .gallery-card img {
+                max-height: none;
+            }
+        }
+
+        .pdf {
+            border: none;
+            width: 100%;
+            height: 420px;
+        }
+
+        .pdf-card {
+            background: rgba(17, 33, 31, 0.85);
+            border: 1px solid var(--accent-soft);
+            border-radius: 12px;
+            padding: 1em;
+            box-shadow: 0 14px 30px rgba(0,0,0,0.32);
+            text-align: center;
+            margin: 1.2em 0;
+        }
+
+        .project-hero-title {
+            background: #304c3f;
+            padding: 2.8em 1.5em 2.2em;
+            text-align: center;
+            border-bottom: 1px solid var(--accent-soft);
+        }
+
+        .project-hero-title h2 {
+            margin: 0 0 0em 0 !important;
+            font-size: 2.6em;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            color: #f5f5f5;
+        }
+
+        .project-hero-title .subtitle {
+            margin: -0.35em 0 0 0 !important;
+            font-size: 1.1em;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: #7a7a7a !important;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+        <header id="header">
+            <h1><a href="index.html">Aashrith</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="resume.html">Resume</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <article id="main" class="project-page">
+            <header class="project-hero-title">
+                <h2>[WIP] NASA Machine Monitoring</h2>
+                <p class="subtitle">'Cyber-Physical Embedded Systems' Final Project</p>
+            </header>
+
+            <section class="banner">
+                <h1>Skills used in this project</h1>
+                <ul class="skills">
+                    <li>PCB Design</li>
+                    <li>Sensor Integration</li>
+                    <li>Communication Protocol</li>
+                    <li>Data Processing</li>
+                </ul>
+            </section>
+
+            <section class="wrapper style5">
+                <div class="inner">
+                    <h3>Project Overview</h3>
+                    <p class="align-left">
+                        Our project aims to build an intelligent industrial machine-monitoring system for NASA that measures vibration, current draw, and temperature from electric motors and detects early-stage faults. The system combines a custom PCB with accelerometers, thermistors, current transformers, ADCs, and an ESP32; a Raspberry Pi that performs higher-level processing and visualization; and real-time fault-detection algorithms including the filtered Park’s vector approach and order-domain transformer. The final deliverable is a fully integrated hardware–software platform that collects synchronized sensor data, processes it, and displays diagnostic outputs through a GUI.
+                    </p>
+
+
+                    <h3>Design Approach</h3>
+                    <p class="align-left"><strong>1. PCB + Embedded Hardware</strong><br>
+                        We design a mixed-signal PCB that interfaces with accelerometers, temperature sensors, and current transformers. The ESP32 handles sampling, light preprocessing, timestamping, and wired/wireless transmission to the Raspberry Pi. Key considerations include ESD protection, analog front-end noise reduction, proper CT biasing, and ensuring synchronous sampling across sensors.
+                    </p>
+                    <p class="align-left"><strong>2. Data Processing + Fault Detection (Raspberry Pi)</strong><br>
+                        All raw sensor streams are fused and processed on the Raspberry Pi. We apply Kalman filtering, LPF/BPF, Filtered Park’s Vector Approach, Order-domain transform, and Marzullo’s algorithm. The Pi serves as the main computation node and provides an API to the GUI.
+                    </p>
+                    <p class="align-left"><strong>3. GUI + Visualization</strong><br>
+                        A lightweight dashboard visualizes vibration, current, temperature, derived metrics, and algorithm outputs in real time. The design is modular for alternate motors and sensing configs.
+                    </p>
+
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/EE149/system_architecture.png" alt="Placeholder 2">
+                        </div>
+                        
+                    </div>
+
+                    <h3>PCB Schematics</h3>
+                    <p class="align-left">There were 2 main PCB's in this project: Temperature + Vibration PCB and AC Current Transformer PCB. Both PCB's communicated through NTP, 
+                        and had options for wireless and wired communication back to the main Raspberry Pi.
+                    </p>
+                    <ul class="align-left">
+                        <li><strong>Temp + Vibe Board</strong> This board is attached to the motor, and measures the temperature and vibration of the motor. Communicating 
+                            to through 2 separate I2C lines, the temperature sensors (SHT30s) would output a digital value, which is locally processed on the ESP32. We utilized
+                            a 4 pin connector, to be able to adjust the positioning and placement of our temperature sensors. On this board also contains the IMU (MPU 9250) 
+                            with the corresponding circuit to measure the vibrations of the motor. 2 sensors were used on the same board for redundancy , and 2 I2C lines were
+                            used to not overload the line with the high frequency of data. 
+                    </li>
+                    </ul>
+
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/EE149/temp_vibe_schem.png" alt="Placeholder 2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/EE149/temp_vibe_layout.png" alt="Placeholder 2">
+                        </div>
+                    </div>
+
+                    <ul class="align-left">
+                        <li><strong>Current Transformer Board</strong> This is the second ESP32 board, attached to the base of the motor. By utilizing 
+                            a clip on current transformer (CR3110-3000) we would be able to measure the current seen through the wires, thus detecting any
+                            anomalies during motor operation. By converting the current measured from the output of the sensor with the Turn's Ratio, we
+                            are able to process the real current seen through the wire. Due to the importance of the having measurements from this board synced
+                            with that of the other ESP32 peripheral’s data, we ensure there clocks are synced through an NTP protocol between the boards.
+                    </li>
+                    </ul>
+
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/EE149/current_schematic.jpg" alt="Placeholder 2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/EE149/current_layour.jpg" alt="Placeholder 2">
+                        </div>
+                    </div>
+                    
+                    <h3>Milestone 1 Check-In</h3>
+                    <p class="align-left"><strong>Status Summary</strong><br>
+                        Attatched is our Milestone 1 summary, consititng of initial meetings with key contacts (EE149 proffesor and NASA AMES contact),
+                        along with intiial system design and real CT charecterization.
+                    </p>
+                    
+                    <div class="gallery1">
+                        <div class="inner">
+                            <iframe class="pdf" 
+                                    src= "images/EE149/149 Milestone 1.pdf"
+                                width="700" height="400">
+                            </iframe>
+                            
+                        </div>
+                        
+                    </div>
+
+                    <h3>Outcome</h3>
+                    <p class="align-left">
+                        As the project continues, I will update with more information. As of this last update (11/25) we have ordered the PCB's and are starting some 
+                        early sensor integration tests in our GUI!
+                    </p>
+
+                    <div class="align-center" style="margin-top: 70px; margin-bottom: 0;">
+                        <ul class="actions special stacked-mobile cta-buttons">
+                            <li><a href="projects.html" class="button primary">See All Projects</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <footer id="footer">
+            <ul class="copyright">
+                <li>&copy;Aashrith Beesabathuni</li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

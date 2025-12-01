@@ -6,44 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-       .container{
-		height:fit-content
-	   }
+        .project-placeholder {
+            width: 100%;
+            height: 240px;
+            background: linear-gradient(180deg, rgba(13, 35, 26, 0.9), rgba(12, 21, 20, 0.94));
+            border: 1px solid var(--accent-soft);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f5f7f6;
+            letter-spacing: 0.18em;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    </style>
+    <style>
+        .container {
+            height: fit-content;
+        }
         .grid {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
-            gap: 40px;
+            gap: 28px;
             margin-top: 20px;
+        }
+        .project {
+            background: linear-gradient(145deg, rgba(17, 33, 31, 0.9), rgba(12, 21, 20, 0.95));
+            border: 1px solid var(--accent-soft);
+            border-radius: 16px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+            cursor: pointer;
+        }
+        .project:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 26px 60px rgba(0, 0, 0, 0.5);
+            border-color: var(--accent);
+            background: linear-gradient(145deg, rgba(17, 33, 31, 0.95), rgba(24, 54, 44, 0.9));
         }
         .project img {
             width: 100%;
-            height: auto;
+            height: 220px;
+            object-fit: cover;
+            display: block;
         }
         .project-description {
-            padding: 15px;
+            padding: 1.4em 1.6em 1.25em;
         }
         .project-description h3 {
-            margin: 0;
-            font-size: 1.2em;
+            margin: 0 0 0.45em 0;
+            font-size: 1.15em;
+            color: #f5f7f6;
+            letter-spacing: 0.08em;
         }
         .project-description p {
-            color: #666;
+            color: var(--muted);
+            margin: 0;
         }
-        .project {
-            background-color: #000;
-            transition: background-color 0.7s ease, color 0.7s ease, transform 0.7s ease;
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45em;
+            padding: 0 1.6em 1.4em;
         }
-        .project:hover {
-            background: #0a2747;
-			
-			transition: background-color 0.6s ease, transform 0.6s ease; 
-            color: #fff;
-            transform: scale(1.05);
+        .project-tag {
+            background: rgba(52, 210, 127, 0.14);
+            border: 1px solid var(--accent-soft);
+            color: #cfe7dc;
+            border-radius: 999px;
+            padding: 0.35em 0.75em;
+            font-size: 0.8em;
+            letter-spacing: 0.04em;
         }
-        .project:hover .project-description p {
-            color: #fff;
-        }
-
         @media (min-width: 600px) {
             .grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -54,10 +90,21 @@
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-	
-		
-/* mobile only styles when the device is 0-600px in maximum width */
-		</style>
+        @media (max-width: 600px) {
+            .project {
+                border-radius: 12px;
+            }
+            .project img {
+                height: 200px;
+            }
+        }
+        .project img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 14px 14px 0 0;
+        }
+    </style>
 </head>
 <body class="is-preload">
     <!-- Page Wrapper -->
@@ -93,18 +140,56 @@
         <!-- Projects Grid -->
         <div class="container">
             <div class="grid">
+                <div class="project" onclick="location.href='machine_monitoring.html';">
+                    <img src="images/NASA-Logo.png" alt="Placeholder Project" style="max-height: 180px; object-fit: contain;">
+                    <div class="project-description">
+                        <h3>[WIP] NASA Intelligent Machine Monitoring</h3>
+                        <p>'Cyber-Physical Embedded Systems' Final Project</p>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">PCB Design</span>
+                        <span class="project-tag">Sensor Integration</span>
+                        <span class="project-tag">Communication Protocol</span>
+                        <span class="project-tag">Data Processing</span>
+                    </div>
+                </div>
+                <div class="project" onclick="location.href='slytherdrive.html';">
+                    <div class="project-placeholder">In Progress</div>
+                    <div class="project-description">
+                        <h3>[WIP] SlytherDrive</h3>
+                        <p>Bio-inspired Snake Robot</p>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Motor Control</span>
+                        <span class="project-tag">Robotic Sim</span>
+                        <span class="project-tag">Controls</span>
+                        <span class="project-tag">Biomechanics</span>
+                    </div>
+                </div>
+                <div class="project" onclick="location.href='midi_keyboard.html';">
+                    <img src="images/HOPE/full_3d_board.png" alt="MIDI Keyboard" style="width: 100%; height: 240px; object-fit: cover;">
+                    <div class="project-description">
+                        <h3>[WIP] MIDI Keyboard Controller</h3>
+                        <p>HOPE PCB Design Final Project</p>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">PCB Design</span>
+                        <span class="project-tag">Firmware</span>
+                        <span class="project-tag">Microcontroller</span>
+                        <span class="project-tag">Misc. Electronics</span>
+                    </div>
+                </div>
                 <div class="project" onclick="location.href='holycr@b.html';">
                     <img src="images/CR@B/robotcad.png" alt="HOLY CR@B !!">
                     <div class="project-description">
                         <h3>HOLY CR@B !!</h3>
-                        <p>15-pound Eggbeater Combat Robot</p>
+                        <p>Finalist 15 pound combat robot</p>
                     </div>
-                </div>
-                <div class="project" onclick="location.href='frc.html';">
-                    <img src="images/FRC/real-robot.jpg" alt="FRC - Hamazon">
-                    <div class="project-description">
-                        <h3>FRC - Hamazon</h3>
-                        <p>Team 1902 Exploding Bacon's 2022 Robot </p>
+                    <div class="project-tags">
+                        <span class="project-tag">CAD</span>
+                        <span class="project-tag">Motor Control</span>
+                        <span class="project-tag">Machining</span>
+                        <span class="project-tag">Misc. Electronics</span>
                     </div>
                 </div>
                 <div class="project" onclick="location.href='drone_automation.html';">
@@ -113,28 +198,42 @@
                         <h3>Drone Delivery System</h3>
                         <p>Sentien Robotics - Consultant R&D Project</p>
                     </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Sensing</span>
+                        <span class="project-tag">Embedded Systems</span>
+                        <span class="project-tag">Microcontroller</span>
+                        <span class="project-tag">CAD</span>
+                    </div>
                 </div>
                 <div class="project" onclick="location.href='fire_suspension.html';">
                     <img src="images/ME100/sidewaysrealforproject.jpg" alt="Project 4">
                     <div class="project-description">
                         <h3>Automated Fire Suspension System</h3>
-                        <p>MECENG 100 Final Project</p>
+                        <p>'Internet of Things' Final Project</p>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Embedded Systems</span>
+                        <span class="project-tag">Motor Control</span>
+                        <span class="project-tag">IoT</span>
+                        <span class="project-tag">Sensing</span>
                     </div>
                 </div>
-                <div class="project" onclick="location.href='#';">
-                    <img src="images/pic03.jpg" alt="Project 5">
+                <div class="project" onclick="location.href='frc.html';">
+                    <img src="images/FRC/real-robot.jpg" alt="FRC - Hamazon">
                     <div class="project-description">
-                        <h3>Spotify Muse</h3>
-                        <p>[PAGE IN PROGRESS] 2 Day Neurotech Hackathon Project</p>
+                        <h3>FRC - Hamazon</h3>
+                        <p>Team 1902 Exploding Bacon's 2022 Robot </p>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Controls</span>
+                        <span class="project-tag">CAD</span>
+                        <span class="project-tag">Manufacturing</span>
+                        <span class="project-tag">Strategy</span>
                     </div>
                 </div>
-                <div class="project" onclick="location.href='#';">
-                    <img src="images/pic03.jpg" alt="Project 6">
-                    <div class="project-description">
-                        <h3>Molex - FA Automation</h3>
-                        <p>[PAGE IN PROGRESS] SU24 Internship</p>
-                    </div>
-                </div>
+            
+                
+                
             </div>
         </div>
 

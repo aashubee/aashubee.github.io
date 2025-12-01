@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Aashrith - MIDI Keyboard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .project-page header { text-align: center; }
+        .project-page h2 { letter-spacing: 0.14em; }
+        .project-page p { color: #111; line-height: 1.75; }
+
+        .banner {
+            background: linear-gradient(180deg, rgba(13, 35, 26, 0.9), rgba(12, 21, 20, 0.94));
+            padding: 24px 16px;
+            text-align: center;
+            border-top: 1px solid var(--accent-soft);
+            border-bottom: 1px solid var(--accent-soft);
+        }
+
+        .banner h1 {
+            margin-bottom: 0.8em;
+            letter-spacing: 0.12em;
+            color: #f5f7f6;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8em;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .skills li {
+            background: rgba(52, 210, 127, 0.14);
+            border: 1px solid var(--accent-soft);
+            border-radius: 999px;
+            padding: 0.6em 1em;
+            color: #e7f5ee;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+            box-shadow: none;
+        }
+
+        .gallery1,
+        .gallery2,
+        .gallery3,
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 14px;
+            margin: 20px 0;
+        }
+
+        .gallery-item,
+        .gallery-card {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            overflow: visible;
+            box-shadow: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .gallery-item img,
+        .gallery-card img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            object-fit: contain;
+            display: block;
+            padding: 0;
+            border: 2px solid var(--accent);
+            border-radius: 8px;
+        }
+
+        .img-medium {
+            max-height: 600px;
+        }
+
+        .pdf {
+            border: none;
+            width: 100%;
+            height: 420px;
+        }
+
+        .pdf-card {
+            background: rgba(17, 33, 31, 0.85);
+            border: 1px solid var(--accent-soft);
+            border-radius: 12px;
+            padding: 1em;
+            box-shadow: 0 14px 30px rgba(0,0,0,0.32);
+            text-align: center;
+            margin: 1.2em 0;
+        }
+
+        .project-hero-title {
+            background: #304c3f;
+            padding: 2.8em 1.5em 2.2em;
+            text-align: center;
+            border-bottom: 1px solid var(--accent-soft);
+        }
+
+        .project-hero-title h2 {
+            margin: 0 0 0em 0 !important;
+            font-size: 2.6em;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            color: #f5f5f5;
+        }
+
+        .project-hero-title .subtitle {
+            margin: -0.35em 0 0 0 !important;
+            font-size: 1.1em;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: #7a7a7a !important;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+        <header id="header">
+            <h1><a href="index.html">Aashrith</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="resume.html">Resume</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <article id="main" class="project-page">
+            <header class="project-hero-title">
+                <h2>[WIP] MIDI Keyboard Controller</h2>
+                <p class="subtitle">HOPE PCB Design Final Project</p>
+            </header>
+
+            <section class="banner">
+                <h1>Skills used in this project</h1>
+                <ul class="skills">
+                    <li>PCB Design</li>
+                    <li>Firmware</li>
+                    <li>Microcontroller</li>
+                    <li>Misc. Electronics</li>
+                </ul>
+            </section>
+
+            <section class="wrapper style5">
+                <div class="inner">
+                    <h3>Project Overview</h3>
+                    <p class="align-left">
+                        This PCB Design project was focussed on the ideation, cretaion, and assembly of a MIDI (Musical Instrument Digital Interface) controller, 
+                        with added funtionality for playback and 'chopping.' As part of IEEE's HOPE (PCB Design) class, me and my team completed the entire board, 
+                        from the layout to the soldering of components to creat the final product. Our board would take multiple inputs, including button presses, 
+                        a potentimeer, and a slider, translating them into musical notes that can be seen with a DAW (Digital Audio Workstation). We also added 
+                        additional functionality (apart from MIDI workflow) by adding a microphone and a speaker, able to capture audio and playback on the controller.
+                        This 
+                    </p>
+
+                    <h5>Input / MIDI Mode</h5>
+                    <p class="align-left">
+                        • 12 buttons map to note-on/note-off messages over USB MIDI, each routed to a DAW.<br>
+                        • A potentiometer and a knob send continuous controller changes (e.g., pan, reverb, filter) as MIDI CC messages.<br>
+                        • All inputs are debounced and translated into MIDI text messages for the host computer.
+                    </p>
+
+                    <h5>Record / Playback Mode</h5>
+                    <p class="align-left">
+                        • Button 1: start/stop recording from the mic (record LED indicator).<br>
+                        • Button 2: play back the recorded clip (play LED indicator).<br>
+                        • Mode switching keeps MIDI controls separate from audio capture to avoid conflicts.<br>
+                        • From there, rest of button functionality used to chop, playback, reverse etc audio clip, for vocal chopping effects.
+
+                    </p>
+
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img class="img-medium" src="images/HOPE/full_3d_board.png" alt="MIDI layout placeholder">
+                        </div>
+                        
+                    </div>
+
+                    <h3>Design Approach</h3>
+                    <p class="align-left">
+                        There were a few constarints we had in mind when desinging. Primairly, burdget and x/y space. We know we wanted at least 12 input 
+                        buttons (coresponding to 12 muscial notes) along with some adjustment scale such as a slider. Because the limiting factor for space 
+                        was the x/y that our switch array took up, pacakaging all components was not too big of a challenge. Instead, our challenge came in
+                        ensuring that we would have good signal integrity in all our lines, esepcially power and the parth from the microphone to the speaker
+                        (which uses an I2S communication protocol). We decided to use an ESP32, to be able to easily program our IC to both preform USB data outputs
+                        (for MIDI mode), and also the basic programming to manipulate recorded audio with the buttons and slider (Mic mode). 
+                    </p>
+
+                    <h3>Schematic</h3>
+                    <p class="align-left">
+                    </p>
+
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/HOPE/unnamed copy.png" alt="MIDI layout placeholder">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/HOPE/unnamed.png" alt="MIDI layout placeholder">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/HOPE/unnamed-2.png" alt="MIDI layout placeholder">
+                        </div>
+                        
+                    </div>
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/HOPE/unnamed-3.png" alt="MIDI layout placeholder">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/HOPE/unnamed-4.png" alt="MIDI layout placeholder">
+                        </div>
+                        
+                    </div>
+
+                    <h3>Layout</h3>
+                    <p class="align-left">
+                    </p>
+
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/HOPE/layout.png" alt="MIDI layout placeholder">
+                        </div>
+                      
+                        
+                    </div>
+
+                    <h3>Outcome</h3>
+                    <p class="align-left">
+                    </p>
+
+                    <p class="align-left">
+                        We have recently recieved the boards, along with our components and soldering stencil. We are assembling the board currently, 
+                        and cant wait to show off the functionality after our initial microcontroller bring up!
+                    </p>
+
+                    <h3>Media Gallery</h3>
+                    <p class="align-left">
+                    </p>
+
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/HOPE/board_solder_esp32.jpeg" alt="MIDI layout placeholder">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/HOPE/solder_process.jpeg" alt="MIDI layout placeholder">
+                        </div>
+                        
+                    </div>
+
+                    <div class="align-center" style="margin-top: 70px; margin-bottom: 0;">
+                        <ul class="actions special stacked-mobile cta-buttons">
+                            <li><a href="projects.html" class="button primary">See All Projects</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <footer id="footer">
+            <ul class="copyright">
+                <li>&copy;Aashrith Beesabathuni</li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

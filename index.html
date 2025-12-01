@@ -5,8 +5,42 @@
 		<title>Aashrith - Home</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		/* Align featured cards to uniform heights */
+		#two.wrapper.alt.style2 {
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		}
+		#two.wrapper.alt.style2 .spotlight {
+			min-height: 420px;
+			display: flex;
+			flex-direction: column;
+		}
+		#two.wrapper.alt.style2 .spotlight .image img {
+			width: 100%;
+			height: 240px;
+			object-fit: cover;
+		}
+		#two.wrapper.alt.style2 .spotlight .content {
+			flex: 1;
+		}
+		.project-tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.45em;
+			padding-top: 0.6em;
+		}
+		.project-tag {
+			background: rgba(52, 210, 127, 0.14);
+			border: 1px solid var(--accent-soft);
+			color: #e7f5ee;
+			border-radius: 999px;
+			padding: 0.35em 0.75em;
+			font-size: 0.8em;
+			letter-spacing: 0.04em;
+		}
+	</style>
 		<style>
 			.txt-rotate > .wrap { 
 				border-right: 0.08em solid #666;
@@ -17,7 +51,7 @@
     			}
 			.text-content{
 				margin: 0;
-				padding: 0;
+				padding: 0 1.75em;
 			}
 			.image-content {
 				order: 2;
@@ -80,13 +114,15 @@
 									<p>Hello there! My name is Aashrith Beesabathuni, a student at UC Berkeley studying EECS (Electrical Engineering + Computer Science) and 
 										Mechanical Engineering. My main area of interest is exploring the blend of hardware and software to create robotic systems to do anything 
 										and everything in between. I believe the best way to learn is by doing, so I love gaining hands-on experience to learn new skills!
-										 On the non-technical end, I love hiking around the Bay Area and spending time outdoors. I recently bought an acoustic guitar and am 
+										 On the non-technical end, I love photography, and expressing my creativity through street and concert style photos. I recently bought an acoustic guitar and am 
 										 learning some of my favorite songs on there!</p>
 										 <div class="company-logos" style="margin-top: 20px;">
 									
 											<div class="logos-container" style="display: flex; justify-content: space-evenly; align-items: center; margin-top: 30px; margin-bottom: 30px;">
-												<img src="images/Apple_logo_grey.svg" alt="Company 2" style="max-width: 80px; max-height: 80px;">
-												<img src="images/Molex-Logo.svg" alt="Company 1" style="max-width: 100px; max-height: 100px ;">
+												<img src="images/berkeley-logo.png" alt="UC Berkeley" style="max-width: 120px; max-height: 70px;">
+												<img src="images/Apple_logo_grey.svg" alt="Apple" style="max-width: 80px; max-height: 80px;">
+												<img src="images/Molex-Logo.svg" alt="Molex" style="max-width: 100px; max-height: 100px ;">
+												
 												
 											</div>
 										</div>
@@ -100,49 +136,66 @@
 					</div>
 				</section>
 				<!-- Two -->
-				<section class="wrapper-style-5">
-					<header class="inner">
-						<h2 class="align-center">Featured Projects</h2>
-					</header>
-				</section>
+					<section class="wrapper-style-5">
+						<header class="inner">
+							<h2 class="align-center">Featured Projects</h2>
+						</header>
+					</section>
 					<section id="two" class="wrapper alt style2">
-						<a href="holycr@b.html">
+						<a href="slytherdrive.html">
 							<section class="spotlight">
-								<div class="image"><img src="images/CR@B/robotcad.png" alt="Combat Robot" /></div>
+								<div class="image"><img src="images/ME139/cad_full.png" alt="SlytherDrive" /></div>
 								<div class="content">
-									<h3>HOLY CR@B !!</h3>
-									<p>Under Combat Robotics @ Berkeley, my team designed and built a 15-pound robot, winning 2nd place in the SBB 2023 competition</p>
+									<h2>[WIP] SlytherDrive</h2>
+									<p>Bio-inspired Snake Robot</p>
+									<div class="project-tags">
+										<span class="project-tag">Robotics</span>
+										<span class="project-tag">Simulation</span>
+										<span class="project-tag">Controls</span>
+										<span class="project-tag">Biomechanics</span>
+									</div>
 								</div>
 							</section>
 						</a>
-						<a href ="drone_automation.html">
+						<a href ="midi_keyboard.html">
 							<section class="spotlight">
-								<div class="image"><img src="images/Sentien/dronecloseupforprojectpage.jpg" alt="" /></div>
+								<div class="image"><img src="images/HOPE/full_3d_board.png" alt="MIDI Keyboard" /></div>
 								<div class="content">
-									<h2>Drone Package Delivery System</h2>
-									<p>As a project for Sentien Robotics, my team designed, built and tested an enclosure to evaluate the capability of automating drone deliveries</p>
+									<h2>MIDI Keyboard Controller</h2>
+									<p>HOPE PCB Design Final Project</p>
+									<div class="project-tags">
+										<span class="project-tag">PCB Design</span>
+										<span class="project-tag">Firmware</span>
+										<span class="project-tag">Microcontroller</span>
+										<span class="project-tag">Misc. Electronics</span>
+									</div>
 								</div>
 								
 							</section>
 						</a>
-						<a href="frc.html">
+						<a href="holycr@b.html">
 							<section class="spotlight">
-								<div class="image"><img src="images/FRC/real-robot.jpg" alt="" /></div><div class="content">
-									<h2>FRC - Hamazon
-									</h2>
-									<p>Team 1902 Exploding Bacon's 2022 Robot, winning the engineering design award at regionals. I was mechanical lead, and drove the robot 
-										during our many competitions</p>
+								<div class="image"><img src="images/CR@B/robotcad.png" alt="HOLY CR@B !!" /></div><div class="content">
+									<h2>HOLY CR@B !!</h2>
+									<p>Finalist 15 pound combat robot</p>
+									<div class="project-tags">
+										<span class="project-tag">CAD</span>
+										<span class="project-tag">Motor Control</span>
+										<span class="project-tag">Machining</span>
+										<span class="project-tag">Misc. Electronics</span>
+									</div>
 								</div>
 							</section>
 						</a>
 					</section>
-					<section class="wrapper-style-4">
-						<header class="inner">
-							<h2 class="align-center" style="margin-top: 20px; margin-bottom: 10px;">
-								<a href="projects.html" class="button">See All Projects</a></li>
-							   
-							</h2>
-						</header>
+					<section class="wrapper style4">
+						<div class="inner align-center">
+							<h3>Want to collaborate or chat?</h3>
+							<ul class="actions special stacked-mobile cta-buttons">
+								<li><a href="projects.html" class="button">See All Projects</a></li>
+								<li><a href="contact.html" class="button primary">Contact Me</a></li>
+							</ul>
+						</div>
 					</section>
 
 			
@@ -201,13 +254,16 @@
 			
 				window.onload = () => {
 					const elements = document.getElementsByClassName('txt-rotate');
-					for (let i=0; i<elements.length; i++) {
-						const toRotate = elements[i].getAttribute('data-rotate');
-						const period = elements[i].getAttribute('data-period');
-						if (toRotate) {
-							new TxtRotate(elements[i], JSON.parse(toRotate), period);
+					const startDelay = 600; // wait for banner fade-in
+					setTimeout(() => {
+						for (let i=0; i<elements.length; i++) {
+							const toRotate = elements[i].getAttribute('data-rotate');
+							const period = elements[i].getAttribute('data-period');
+							if (toRotate) {
+								new TxtRotate(elements[i], JSON.parse(toRotate), period);
+							}
 						}
-					}
+					}, startDelay);
 				};
 			</script>
 		<!-- Scripts -->
