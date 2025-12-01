@@ -10,12 +10,20 @@
 	<style>
 		/* Align featured cards to uniform heights */
 		#two.wrapper.alt.style2 {
+			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 24px;
+			align-items: stretch;
+		}
+		#two.wrapper.alt.style2 > a {
+			display: block;
+			height: 100%;
 		}
 		#two.wrapper.alt.style2 .spotlight {
 			min-height: 420px;
 			display: flex;
 			flex-direction: column;
+			height: 100%;
 		}
 		#two.wrapper.alt.style2 .spotlight .image img {
 			width: 100%;
