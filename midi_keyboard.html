@@ -166,19 +166,18 @@
                 <div class="inner">
                     <h3>Project Overview</h3>
                     <p class="align-left">
-                        This PCB Design project was focussed on the ideation, cretaion, and assembly of a MIDI (Musical Instrument Digital Interface) controller, 
-                        with added funtionality for playback and 'chopping.' As part of IEEE's HOPE (PCB Design) class, me and my team completed the entire board, 
-                        from the layout to the soldering of components to creat the final product. Our board would take multiple inputs, including button presses, 
-                        a potentimeer, and a slider, translating them into musical notes that can be seen with a DAW (Digital Audio Workstation). We also added 
+                        This PCB design project was focused on the ideation, creation, and assembly of a MIDI (Musical Instrument Digital Interface) controller, 
+                        with added functionality for playback and 'chopping.' As part of IEEE's HOPE (PCB Design) class, my team and I completed the entire board, 
+                        from the layout to the soldering of components to create the final product. Our board would take multiple inputs, including button presses 
+                        and a slider, translating them into musical notes that can be seen with a DAW (Digital Audio Workstation). We also added 
                         additional functionality (apart from MIDI workflow) by adding a microphone and a speaker, able to capture audio and playback on the controller.
-                        This 
                     </p>
 
                     <h5>Input / MIDI Mode</h5>
                     <p class="align-left">
                         • 12 buttons map to note-on/note-off messages over USB MIDI, each routed to a DAW.<br>
                         • A potentiometer and a knob send continuous controller changes (e.g., pan, reverb, filter) as MIDI CC messages.<br>
-                        • All inputs are debounced and translated into MIDI text messages for the host computer.
+                        • All inputs are debounced and translated into MIDI text messages for the host computer through USB communication.
                     </p>
 
                     <h5>Record / Playback Mode</h5>
@@ -186,7 +185,7 @@
                         • Button 1: start/stop recording from the mic (record LED indicator).<br>
                         • Button 2: play back the recorded clip (play LED indicator).<br>
                         • Mode switching keeps MIDI controls separate from audio capture to avoid conflicts.<br>
-                        • From there, rest of button functionality used to chop, playback, reverse etc audio clip, for vocal chopping effects.
+                        • From there, rest of button functionality used to chop, playback, reverse etc audio clip, for vocal chopping effects. Processed locally
 
                     </p>
 
@@ -199,12 +198,13 @@
 
                     <h3>Design Approach</h3>
                     <p class="align-left">
-                        There were a few constarints we had in mind when desinging. Primairly, burdget and x/y space. We know we wanted at least 12 input 
-                        buttons (coresponding to 12 muscial notes) along with some adjustment scale such as a slider. Because the limiting factor for space 
-                        was the x/y that our switch array took up, pacakaging all components was not too big of a challenge. Instead, our challenge came in
-                        ensuring that we would have good signal integrity in all our lines, esepcially power and the parth from the microphone to the speaker
-                        (which uses an I2S communication protocol). We decided to use an ESP32, to be able to easily program our IC to both preform USB data outputs
-                        (for MIDI mode), and also the basic programming to manipulate recorded audio with the buttons and slider (Mic mode). 
+                        There were a few constraints we had in mind when designing. Primarily, budget and x/y space. We knew we wanted at least 12 input 
+                        buttons (corresponding to 12 musical notes) along with some adjustment scale such as a slider. Because the limiting factor for space 
+                        was the x/y that our switch array took up, packaging all the components was not too big of a challenge. Instead, our challenge came in
+                        ensuring that we would have good signal integrity in all our lines, especially power and the path from the microphone to the speaker
+                        (which uses an I2S communication protocol). We decided to use an ESP32, to be able to easily program our IC to both perform USB data outputs
+                        (for MIDI mode), and also the basic programming to manipulate recorded audio with the buttons and slider (for Record mode). 
+
                     </p>
 
                     <h3>Schematic</h3>
@@ -225,13 +225,23 @@
                     </div>
                     <div class="gallery2">
                         <div class="gallery-item">
-                            <img src="images/HOPE/unnamed-3.png" alt="MIDI layout placeholder">
+                            <img src="images/HOPE/schematic-new/Screenshot 2025-12-01 at 7.38.29 PM.png" alt="MIDI layout placeholder">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/HOPE/unnamed-4.png" alt="MIDI layout placeholder">
+                            <img src="images/HOPE/schematic-new/Screenshot 2025-12-01 at 7.39.15 PM.png" alt="MIDI layout placeholder">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/HOPE/schematic-new/Screenshot 2025-12-01 at 7.40.25 PM.png" alt="MIDI layout placeholder">
                         </div>
                         
                     </div>
+
+                    <p class="align-left">
+                        Highlighted above are the main areas of the schematic. This consists of the ESP32 circuit, the button arrays (utilizing a row and column style input, 
+                        where the ESP measures voltage across to detect button presses, allowing us to sample more buttons given less I/O pins) and the slider.
+                        Also shown is the status LED, which displays which operational mode the system is in. There is also the microphone data path, using I2S communication
+                        to best transmit mic data to be processed by the Arduino and the speaker output.
+                    </p>
 
                     <h3>Layout</h3>
                     <p class="align-left">
@@ -250,8 +260,8 @@
                     </p>
 
                     <p class="align-left">
-                        We have recently recieved the boards, along with our components and soldering stencil. We are assembling the board currently, 
-                        and cant wait to show off the functionality after our initial microcontroller bring up!
+                        We have recently received the boards, along with our components and soldering stencil. We are assembling the board currently, 
+                        and can't wait to show off the functionality after our initial microcontroller bring up!
                     </p>
 
                     <h3>Media Gallery</h3>
