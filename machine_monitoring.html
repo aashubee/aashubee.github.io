@@ -73,8 +73,10 @@
             box-shadow: none;
             display: flex;
             align-items: center;
+            flex-direction: column;
             justify-content: center;
             padding: 0.75em;
+            text-align: center;
         }
 
         .gallery-item img,
@@ -159,7 +161,7 @@
 
         <article id="main" class="project-page">
             <header class="project-hero-title">
-                <h2>[WIP] NASA Machine Monitoring</h2>
+                <h2>NASA Machine Monitoring</h2>
                 <p class="subtitle">'Cyber-Physical Embedded Systems' Final Project</p>
             </header>
 
@@ -238,6 +240,16 @@
                             <img src="images/EE149/current_layour.jpg" alt="Placeholder 2">
                         </div>
                     </div>
+
+                    <h3>GUI + Live Visualization</h3>
+                    <p class="align-left">
+                        The GUI consumed real-time sensor data over two redundant links: a Bluetooth channel for quick setup and a wired serial link for lab demos and noisy environments. The Python dashboard ingested both streams, synchronized packets, and rendered live vibration, current, and temperature plots alongside fault flags so we could see issues as they emerged.
+                    </p>
+                    <div class="gallery1">
+                        <div class="gallery-item">
+                            <img src="images/EE149/EE149_GUI.jpeg" alt="GUI dashboard placeholder">
+                        </div>
+                    </div>
                     
                     <h3>Milestone 1 Check-In</h3>
                     <p class="align-left"><strong>Status Summary</strong><br>
@@ -258,9 +270,50 @@
 
                     <h3>Outcome</h3>
                     <p class="align-left">
-                        As the project continues, I will update with more information. As of this last update (11/25) we have ordered the PCB's and are starting some 
-                        early sensor integration tests in our GUI!
+                        With our final presentaiton, we were able to present our work to the proffesors and class, showcasing a live demo of our GUI being able
+                        showcase fault detection on our motor, utilizing sensor fusion of the 3 inputs we recieved from the motor. By adding an offset mass for 
+                        one example, and adding a diode along one of the wires of our 3 phase motor, we were able to showcase our implementation correctly identifiying
+                        when we would see problms with the motors health. Attatched is the final research paper, along with the poster we created for our project. 
                     </p>
+                    <div class="gallery1">
+                        <div class="gallery-item">
+                            <img src="images/EE149/ee149_poster.png" alt="Monitoring demo snapshot">
+                        </div>
+                    </div>
+                    <div class="pdf-card">
+                        <p class="align-left"><strong>Final Report </strong><br>
+                        </p>
+                        <iframe class="pdf" src="images/EE149/149_paper.pdf" title="Final report placeholder"></iframe>
+                    </div>
+
+
+                    <h3>Media Gallery</h3>
+                    <p class="align-left">
+                    </p>
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <video controls muted playsinline preload="metadata" style="width:100%; border:2px solid var(--accent); border-radius:8px;">
+                                <source src="images/EE149/IMG_9200.mov" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="gallery-item">
+                            <video controls muted playsinline preload="metadata" style="width:100%; border:2px solid var(--accent); border-radius:8px;">
+                                <source src="images/EE149/69BE2E7F-E3D6-412C-83E7-0FA97AB96967IMG_3630.mov" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/EE149/F95897CC-4088-4502-B37A-CF108B149D00.jpeg" alt="Healthy motor setup">
+                            <p class="align-left" style="margin-top:0.4em;">Healthy motor</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/EE149/IMG_5291.jpeg" alt="Motor with injected fault (diode)">
+                            <p class="align-left" style="margin-top:0.4em;">Motor with error (diode)</p>
+                        </div>
+                    </div>
 
                     <div class="align-center" style="margin-top: 70px; margin-bottom: 0;">
                         <ul class="actions special stacked-mobile cta-buttons">
