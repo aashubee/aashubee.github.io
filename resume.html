@@ -10,52 +10,27 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/site.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-    <style>
-        .pdf {
-            width: 100%;
-            aspect-ratio: 4 / 3;
-        }
-        .pdf,
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-		@media screen and (max-width: 736px) {
-
-		.pdf{
-			width:100%;
-			height:100%;
-		}
-	}
-    </style>
-	<body class="is-preload">
+	<body class="is-preload resume-page">
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
 				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html">Aashrith</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="resume.html">Resume</a></li>
-											<li><a href="projects.html">Projects</a></li>
-											<li><a href="contact.html">Contact</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+					<nav id="site-nav">
+						<a href="index.html" class="nav-logo">Aashrith</a>
+						<ul class="nav-links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="resume.html" class="active">Resume</a></li>
+							<li><a href="projects.html">Projects</a></li>
+						</ul>
+						<a href="contact.html" class="nav-cta">Contact</a>
+						<button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+							<span></span><span></span><span></span>
+						</button>
+					</nav>
 
 				<!-- Main -->
 					<article id="main">
@@ -65,7 +40,7 @@
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
-                                <iframe class="pdf" 
+                                <iframe class="resume-pdf"
                                         src= "images/AashrithB_Resume.pdf"
                                     width="800" height="500">
                                 </iframe>
@@ -77,23 +52,12 @@
 					</article>
 
 				<!-- Footer -->
-					<footer id="footer">
-						
-						<ul class="copyright">
-							<li>&copy; Aashrith Beesabathuni</li>
-						</ul>
-					</footer>
+					<footer id="site-footer"><p>&copy; Aashrith Beesabathuni</p></footer>
 
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="assets/js/nav-toggle.js"></script>
 
 	</body>
 </html>
