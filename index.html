@@ -1,288 +1,190 @@
 <!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Aashrith - Home</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body>
 
-<html>
-	<head>
-		<title>Aashrith - Home</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	<style>
-		/* Align featured cards to uniform heights */
-		#two.wrapper.alt.style2 {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-			gap: 24px;
-			align-items: stretch;
-		}
-		#two.wrapper.alt.style2 > a {
-			display: block;
-			height: 100%;
-		}
-		#two.wrapper.alt.style2 .spotlight {
-			min-height: 420px;
-			display: flex;
-			flex-direction: column;
-			height: 100%;
-		}
-		#two.wrapper.alt.style2 .spotlight .image img {
-			width: 100%;
-			height: 240px;
-			object-fit: cover;
-		}
-		#two.wrapper.alt.style2 .spotlight .content {
-			flex: 1;
-		}
-		.project-tags {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 0.45em;
-			padding-top: 0.6em;
-		}
-		.project-tag {
-			background: rgba(52, 210, 127, 0.14);
-			border: 1px solid var(--accent-soft);
-			color: #e7f5ee;
-			border-radius: 999px;
-			padding: 0.35em 0.75em;
-			font-size: 0.8em;
-			letter-spacing: 0.04em;
-		}
-	</style>
-		<style>
-			.txt-rotate > .wrap { 
-				border-right: 0.08em solid #666;
-			}
-			@media (max-width: 600px) {
-   			 .content-wrapper {
-    	    	flex-direction: column;
-    			}
-			.text-content{
-				margin: 0;
-				padding: 0 1.75em;
-			}
-			.image-content {
-				order: 2;
-				margin-left: 0; /* Reset margin for smaller screens */
-				
-    		}
-			.profile-image {
-				
-				margin: 0 auto; /* Center the image */
-    		}
-   
-	
-			}
-			
-		</style>
-	</head>
-	<body class="landing is-preload">
+  <nav id="site-nav">
+    <a href="index.html" class="nav-logo">Aashrith</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Contact</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+  <!-- HERO -->
+  <section id="hero">
+    <!-- PCB artwork slot: replace this comment with <img> or <svg> when ready -->
+    <div class="hero-pcb-slot"></div>
+    <div class="hero-text">
+      <span class="hero-annotation">// portfolio_v2 · EECS + ME · UC Berkeley</span>
+      <h1 class="hero-name">Hi, I'm<br><span class="hero-green">Aashrith.</span></h1>
+      <p class="hero-tagline">
+        and I am a <span
+          class="txt-rotate"
+          data-period="2000"
+          data-rotate='["Engineer.","Designer.","Programmer.","Maker.","Tinkerer."]'
+        ></span>
+      </p>
+      <div class="hero-cta">
+        <a href="projects.html" class="btn-primary">View Projects</a>
+        <a href="#about" class="btn-ghost">Learn More ↓</a>
+      </div>
+    </div>
+    <div class="hero-corner">AASHRITH_B · REV_02</div>
+  </section>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Aashrith</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="resume.html">Resume</a></li>
-											<li><a href="projects.html">Projects</a></li>
-											<li><a href="contact.html">Contact</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+  <hr class="section-divider">
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2>Hi, I'm Aashrith</h2>
-							<h4> and I am a 
-								<span class="txt-rotate" data-period="2000" data-rotate='[ "Engineer.", "Designer.", "Programmer.", "Maker.", "Tinkerer." ]'></span>
-							</h4>
-						</div>
-						<a href="#one" class="more scrolly">Learn More</a>
-					</section>
+  <!-- ABOUT -->
+  <section id="about" class="about-section animate-in">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="eyebrow">// about_me</span>
+        <h2>About Me</h2>
+        <p>Hello there! My name is Aashrith Beesabathuni, a senior at UC Berkeley studying EECS (Electrical Engineering + Computer Science) and
+          Mechanical Engineering. My area of interest is robotics, as I love the intersection between hardware and software to create a system for any purpose.
+          I believe the best way to learn is by doing, so I love gaining hands-on experience to learn new skills! As a senior graduating in May 2026, I wanted to create
+          a portfolio to show off some of my technical work throughout the years.
+          On the non-technical end, I love photography, and expressing my creativity through street and concert style photos. Feel free to reach out if you want to chat about anything
+          that interests you on here!</p>
+        <div class="company-logos">
+          <div class="logos-container">
+            <img src="images/aws-color.png" alt="AWS">
+            <img src="images/Apple_logo_grey.svg" alt="Apple">
+            <img src="images/Molex-Logo.svg" alt="Molex">
+            <img src="images/berkeley-logo.png" alt="UC Berkeley">
+          </div>
+        </div>
+      </div>
+      <div class="about-photo">
+        <img src="images/aashrithpfp2.jpg" alt="Aashrith Beesabathuni" class="profile-image">
+      </div>
+    </div>
+  </section>
 
-				<!-- One -->
-				<section id="one" class="wrapper style1 special">
-					<div class="inner">
-						<header class="major">
-							<h2>About Me<br /></h2>
-							<div class="content-wrapper">
-								<div class="text-content">
-									<p>Hello there! My name is Aashrith Beesabathuni, a senior at UC Berkeley studying EECS (Electrical Engineering + Computer Science) and 
-										Mechanical Engineering. My area of interest is robotics, as I love the intersection between hardware and software to create a system for any purpose.
-										 I believe the best way to learn is by doing, so I love gaining hands-on experience to learn new skills! As a senior graduating in May 2026, I wanted to create
-										 a portfolio to show off some of my technical work throughout the years. 
-										 On the non-technical end, I love photography, and expressing my creativity through street and concert style photos. Feel free to reach out if you want to chat about anything
-										 that interests you on here!
-										 <div class="company-logos" style="margin-top: 20px;">
-									
-											<div class="logos-container" style="display: flex; justify-content: space-evenly; align-items: center; margin-top: 30px; margin-bottom: 30px;">
-												<img src="images/berkeley-logo.png" alt="UC Berkeley" style="max-width: 120px; max-height: 70px;">
-												<img src="images/Apple_logo_grey.svg" alt="Apple" style="max-width: 80px; max-height: 80px;">
-												<img src="images/Molex-Logo.svg" alt="Molex" style="max-width: 100px; max-height: 100px ;">
-												
-												
-											</div>
-										</div>
-								</div>
-								<div class="image-content">
-									<img src="images\aashrithpfp2.jpg" alt="Aashrith Beesabathuni" class="profile-image">
-								</div>
-								
-							</div>
-						</header>
-					</div>
-				</section>
-				<!-- Two -->
-					<section class="wrapper-style-5">
-						<header class="inner">
-							<h2 class="align-center">Featured Projects</h2>
-						</header>
-					</section>
-					<section id="two" class="wrapper alt style2">
-						<a href="slytherdrive.html">
-							<section class="spotlight">
-								<img src="images/ME139/IMG_3265.jpeg" alt="SlytherDrive snake robot" style="width: 100%; height: 240px; object-fit: cover; object-position: center;">
-								<div class="content">
-									<h2>SlytherDrive</h2>
-									<p>Bio-inspired Snake Robot</p>
-									<div class="project-tags">
-										<span class="project-tag">Robotics</span>
-										<span class="project-tag">Simulation</span>
-										<span class="project-tag">Controls</span>
-										<span class="project-tag">Biomechanics</span>
-									</div>
-								</div>
-							</section>
-						</a>
-						<a href ="midi_keyboard.html">
-							<section class="spotlight">
-								<img src="images/HOPE/midi_real.png" alt="MIDI Keyboard" style="width: 100%; height: 240px; object-fit: cover;">
-								<div class="content">
-									<h2>MIDI Keyboard Controller</h2>
-									<p>HOPE PCB Design Final Project</p>
-									<div class="project-tags">
-										<span class="project-tag">PCB Design</span>
-										<span class="project-tag">Firmware</span>
-										<span class="project-tag">Microcontroller</span>
-										<span class="project-tag">Misc. Electronics</span>
-									</div>
-								</div>
-								
-							</section>
-						</a>
-						<a href="holycr@b.html">
-							<section class="spotlight">
-								<div class="image"><img src="images/CR@B/robotcad.png" alt="HOLY CR@B !!" /></div><div class="content">
-									<h2>HOLY CR@B !!</h2>
-									<p>Finalist 15 pound combat robot</p>
-									<div class="project-tags">
-										<span class="project-tag">CAD</span>
-										<span class="project-tag">Motor Control</span>
-										<span class="project-tag">Machining</span>
-										<span class="project-tag">Misc. Electronics</span>
-									</div>
-								</div>
-							</section>
-						</a>
-					</section>
-					<section class="wrapper style4">
-						<div class="inner align-center">
-							<h3>Want to collaborate or chat?</h3>
-							<ul class="actions special stacked-mobile cta-buttons">
-								<li><a href="projects.html" class="button">See All Projects</a></li>
-								<li><a href="contact.html" class="button primary">Contact Me</a></li>
-							</ul>
-						</div>
-					</section>
+  <hr class="section-divider">
 
-			
+  <!-- FEATURED PROJECTS -->
+  <section class="featured-projects-section animate-in">
+    <div class="featured-projects-header">
+      <h2>Featured Projects</h2>
+      <a href="projects.html" class="see-all-link">// see_all →</a>
+    </div>
+    <div class="featured-grid">
 
-				<!-- Footer -->
-					<footer id="footer">
-						
-						<ul class="copyright">
-							<li>&copy; Aashrith Beesabathuni</li>
-						</ul>
-					</footer>
+      <a href="slytherdrive.html" class="project-card" style="text-decoration:none;">
+        <img src="images/ME139/IMG_3265.jpeg" alt="SlytherDrive snake robot">
+        <div class="project-description">
+          <h3>SlytherDrive</h3>
+          <p>Bio-inspired Snake Robot</p>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">Robotics</span>
+          <span class="project-tag">Simulation</span>
+          <span class="project-tag">Controls</span>
+          <span class="project-tag">Biomechanics</span>
+        </div>
+      </a>
 
-			</div>
-			<script>
-				class TxtRotate {
-					constructor(el, toRotate, period) {
-						this.toRotate = toRotate;
-						this.el = el;
-						this.loopNum = 0;
-						this.period = parseInt(period, 10) || 2000;
-						this.txt = '';
-						this.tick();
-						this.isDeleting = false;
-					}
-			
-					tick() {
-						const i = this.loopNum % this.toRotate.length;
-						const fullTxt = this.toRotate[i];
-			
-						if (this.isDeleting) {
-							this.txt = fullTxt.substring(0, this.txt.length - 1);
-						} else {
-							this.txt = fullTxt.substring(0, this.txt.length + 1);
-						}
-			
-						this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-			
-						let delta = 200 - Math.random() * 100;
-			
-						if (this.isDeleting) {
-							delta /= 2;
-						}
-			
-						if (!this.isDeleting && this.txt === fullTxt) {
-							delta = this.period;
-							this.isDeleting = true;
-						} else if (this.isDeleting && this.txt === '') {
-							this.isDeleting = false;
-							this.loopNum++;
-							delta = 500;
-						}
-			
-						setTimeout(() => this.tick(), delta);
-					}
-				}
-			
-				window.onload = () => {
-					const elements = document.getElementsByClassName('txt-rotate');
-					const startDelay = 600; // wait for banner fade-in
-					setTimeout(() => {
-						for (let i=0; i<elements.length; i++) {
-							const toRotate = elements[i].getAttribute('data-rotate');
-							const period = elements[i].getAttribute('data-period');
-							if (toRotate) {
-								new TxtRotate(elements[i], JSON.parse(toRotate), period);
-							}
-						}
-					}, startDelay);
-				};
-			</script>
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <a href="midi_keyboard.html" class="project-card" style="text-decoration:none;">
+        <img src="images/HOPE/midi_real.png" alt="MIDI Keyboard">
+        <div class="project-description">
+          <h3>MIDI Keyboard Controller</h3>
+          <p>HOPE PCB Design Final Project</p>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">PCB Design</span>
+          <span class="project-tag">Firmware</span>
+          <span class="project-tag">Microcontroller</span>
+          <span class="project-tag">Misc. Electronics</span>
+        </div>
+      </a>
 
-	</body>
+      <a href="holycr@b.html" class="project-card" style="text-decoration:none;">
+        <img src="images/CR@B/robotcad.png" alt="HOLY CR@B !!">
+        <div class="project-description">
+          <h3>HOLY CR@B !!</h3>
+          <p>Finalist 15 pound combat robot</p>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">CAD</span>
+          <span class="project-tag">Motor Control</span>
+          <span class="project-tag">Machining</span>
+          <span class="project-tag">Misc. Electronics</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <div class="cta-strip animate-in">
+    <h3>Want to collaborate or chat?</h3>
+    <div class="hero-cta">
+      <a href="projects.html" class="btn-ghost">See All Projects</a>
+      <a href="contact.html" class="btn-primary">Contact Me</a>
+    </div>
+  </div>
+
+  <footer id="site-footer">
+    <p>&copy; Aashrith Beesabathuni</p>
+  </footer>
+
+  <!-- TxtRotate typewriter animation -->
+  <script>
+    class TxtRotate {
+      constructor(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.isDeleting = false;
+        this.tick();
+      }
+      tick() {
+        const i = this.loopNum % this.toRotate.length;
+        const fullTxt = this.toRotate[i];
+        this.txt = this.isDeleting
+          ? fullTxt.substring(0, this.txt.length - 1)
+          : fullTxt.substring(0, this.txt.length + 1);
+        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+        let delta = 200 - Math.random() * 100;
+        if (this.isDeleting) delta /= 2;
+        if (!this.isDeleting && this.txt === fullTxt) {
+          delta = this.period;
+          this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+          this.isDeleting = false;
+          this.loopNum++;
+          delta = 500;
+        }
+        setTimeout(() => this.tick(), delta);
+      }
+    }
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.querySelectorAll('.txt-rotate').forEach(el => {
+          const toRotate = el.getAttribute('data-rotate');
+          const period = el.getAttribute('data-period');
+          if (toRotate) new TxtRotate(el, JSON.parse(toRotate), period);
+        });
+      }, 400);
+    });
+  </script>
+  <script src="assets/js/nav-toggle.js"></script>
+  <script src="assets/js/scroll-animations.js"></script>
+
+</body>
 </html>
