@@ -378,8 +378,8 @@
 /* projects.html cards: tags sit flush against the card edge, so they carry their own inset */
 .project-card .project-tags { padding: 0 1.6em 1.4em; }
 
-/* homepage spotlight cards: tags sit inside .content, which already has padding */
-#two.wrapper.alt.style2 .project-tags { padding-top: 0.6em; }
+/* homepage featured-grid cards: tags sit inside .content, which already has padding */
+.featured-grid .project-tags { padding-top: 0.6em; }
 
 @media (min-width: 600px) {
 	.projects-grid { grid-template-columns: repeat(2, 1fr); }
