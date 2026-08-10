@@ -1,18 +1,20 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Sora:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Space+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Sora:wght@400;500&display=swap');
 
 :root {
-	--bg: #0d1716;
-	--panel: #11211f;
-	--panel-strong: #0c1514;
-	--text: #e7f5ee;
-	--muted: #cfd7d4;
-	--accent: #34d27f;
-	--accent-strong: #1fb86d;
-	--accent-soft: rgba(52, 210, 127, 0.12);
-	--font-heading: "Space Grotesk", "Open Sans", Helvetica, sans-serif;
-	--font-body: "Sora", "Open Sans", Helvetica, sans-serif;
+  --bg:           #0d1716;
+  --panel:        #1a2e24;
+  --panel-strong: #0c1514;
+  --text:         #e7f5ee;
+  --muted:        #b8cfc5;
+  --accent:       #34d27f;
+  --accent-strong:#1fb86d;
+  --accent-soft:  rgba(52, 210, 127, 0.12);
+  --accent-dim:   rgba(52, 210, 127, 0.13);
+  --font-display: 'Big Shoulders Display', sans-serif;
+  --font-heading: 'Space Grotesk', 'Open Sans', Helvetica, sans-serif;
+  --font-body:    'Sora', 'Open Sans', Helvetica, sans-serif;
+  --font-mono:    'IBM Plex Mono', monospace;
 }
 
 /*
@@ -4593,4 +4595,170 @@ hr {
 
 ul.icons a:hover {
 	color: var(--accent);
+}
+
+/* ── smooth scroll ── */
+html { scroll-behavior: smooth; }
+
+/* ── hero section ── */
+#hero {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  padding: 0 7vw;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+}
+#hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(52,210,127,0.12) 1px, transparent 1px);
+  background-size: 26px 26px;
+  pointer-events: none;
+}
+#hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 55% 80% at 22% 50%, var(--bg) 25%, transparent 75%);
+  pointer-events: none;
+}
+.hero-text { position: relative; z-index: 2; max-width: 640px; }
+.hero-annotation {
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  color: var(--accent);
+  letter-spacing: 0.16em;
+  opacity: 0.6;
+  margin-bottom: 0.9em;
+  display: block;
+}
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 10vw, 9.5rem);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.3em;
+  color: var(--text);
+}
+.hero-name .hero-green { color: var(--accent); }
+.hero-tagline {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 2.4em;
+  min-height: 2em;
+}
+.txt-rotate > .wrap {
+  border-right: 2px solid var(--accent);
+  padding-right: 2px;
+  color: var(--text);
+}
+.hero-cta { display: flex; gap: 1em; flex-wrap: wrap; }
+.hero-corner {
+  position: absolute;
+  bottom: 2em; right: 7vw;
+  font-family: var(--font-mono);
+  font-size: 0.62em;
+  color: var(--accent);
+  opacity: 0.3;
+  letter-spacing: 0.12em;
+  z-index: 2;
+}
+/* Slot for PCB artwork — user will fill later */
+.hero-pcb-slot {
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 55%;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
+  mask-image: linear-gradient(to right, transparent 0%, black 30%);
+}
+
+/* ── about section ── */
+.about-section { padding: 6em 7vw; }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 5em;
+  align-items: start;
+}
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  color: var(--accent);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 0.9em;
+  display: block;
+}
+.about-section h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.2em;
+  color: var(--text);
+}
+.about-section p { font-size: 1em; color: var(--muted); line-height: 1.85; }
+.about-photo .profile-image {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(52,210,127,0.2);
+  display: block;
+}
+
+/* ── section divider ── */
+.section-divider {
+  margin: 0 7vw;
+  border: none;
+  border-top: 1px solid rgba(52,210,127,0.08);
+}
+
+/* ── CTA strip ── */
+.cta-strip {
+  padding: 4em 7vw;
+  text-align: center;
+  border-top: 1px solid rgba(52,210,127,0.08);
+}
+.cta-strip h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 1.2em;
+  color: var(--text);
+}
+.cta-strip .hero-cta { justify-content: center; }
+
+/* ── scroll-entry animation ── */
+.animate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.animate-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── footer ── */
+#site-footer {
+  text-align: center;
+  padding: 2em;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  opacity: 0.6;
+}
+
+/* ── responsive ── */
+@media screen and (max-width: 736px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-photo { order: -1; max-width: 280px; margin: 0 auto; }
 }
