@@ -5,159 +5,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <style>
-        .project-page header { text-align: center; }
-        .project-page h2 { letter-spacing: 0.14em; }
-        .project-page p { color: #111; line-height: 1.75; }
-
-        .banner {
-            background: linear-gradient(180deg, rgba(13, 35, 26, 0.9), rgba(12, 21, 20, 0.94));
-            padding: 24px 16px;
-            text-align: center;
-            border-top: 1px solid var(--accent-soft);
-            border-bottom: 1px solid var(--accent-soft);
-        }
-
-        .banner h1 {
-            margin-bottom: 0.8em;
-            letter-spacing: 0.12em;
-            color: #f5f7f6;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.8em;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .skills li {
-            background: rgba(52, 210, 127, 0.14);
-            border: 1px solid var(--accent-soft);
-            border-radius: 999px;
-            padding: 0.6em 1em;
-            color: #e7f5ee;
-            letter-spacing: 0.05em;
-            font-weight: 500;
-            box-shadow: none;
-        }
-
-        .gallery1,
-        .gallery2,
-        .gallery3,
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 14px;
-            margin: 20px 0;
-        }
-
-        .gallery2 {
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        }
-
-        .gallery3 {
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        }
-
-        .gallery-item,
-        .gallery-card {
-            background: transparent;
-            border: none;
-            border-radius: 0;
-            overflow: visible;
-            box-shadow: none;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0.75em;
-            text-align: center;
-        }
-
-        .gallery-item img,
-        .gallery-card img {
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            object-fit: contain;
-            display: block;
-            padding: 0;
-            border: 2px solid var(--accent);
-            border-radius: 8px;
-        }
-
-        @media screen and (max-width: 736px) {
-            .gallery-item img,
-            .gallery-card img {
-                max-height: none;
-            }
-        }
-
-        .pdf {
-            border: none;
-            width: 100%;
-            height: 420px;
-        }
-
-        .pdf-card {
-            background: rgba(17, 33, 31, 0.85);
-            border: 1px solid var(--accent-soft);
-            border-radius: 12px;
-            padding: 1em;
-            box-shadow: 0 14px 30px rgba(0,0,0,0.32);
-            text-align: center;
-            margin: 1.2em 0;
-        }
-
-        .project-hero-title {
-            background: #304c3f;
-            padding: 2.8em 1.5em 2.2em;
-            text-align: center;
-            border-bottom: 1px solid var(--accent-soft);
-        }
-
-        .project-hero-title h2 {
-            margin: 0 0 0em 0 !important;
-            font-size: 2.6em;
-            font-weight: 800;
-            letter-spacing: 0.08em;
-            color: #f5f5f5;
-        }
-
-        .project-hero-title .subtitle {
-            margin: -0.35em 0 0 0 !important;
-            font-size: 1.1em;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-            color: #7a7a7a !important;
-        }
-    </style>
 </head>
 <body class="is-preload">
     <div id="page-wrapper">
-        <header id="header">
-            <h1><a href="index.html">Aashrith</a></h1>
-            <nav id="nav">
-                <ul>
-                    <li class="special">
-                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
-                        <div id="menu">
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="resume.html">Resume</a></li>
-                                <li><a href="projects.html">Projects</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+        <nav id="site-nav">
+          <a href="index.html" class="nav-logo">Aashrith</a>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+          </ul>
+          <a href="contact.html" class="nav-cta">Contact</a>
+          <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
 
         <article id="main" class="project-page">
             <header class="project-hero-title">
@@ -292,30 +156,30 @@
                     </p>
                     <div class="gallery2">
                         <div class="gallery-item">
-                            <video controls muted playsinline preload="metadata" style="width:100%; border:2px solid var(--accent); border-radius:8px;">
+                            <video class="gallery-video" controls muted playsinline preload="metadata">
                                 <source src="images/EE149/IMG_9200.mov" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="gallery-item">
-                            <video controls muted playsinline preload="metadata" style="width:100%; border:2px solid var(--accent); border-radius:8px;">
+                            <video class="gallery-video" controls muted playsinline preload="metadata">
                                 <source src="images/EE149/69BE2E7F-E3D6-412C-83E7-0FA97AB96967IMG_3630.mov" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                     </div>
                     <div class="gallery2">
-                        <div class="gallery-item">
+                        <div class="gallery-item has-caption">
                             <img src="images/EE149/F95897CC-4088-4502-B37A-CF108B149D00.jpeg" alt="Healthy motor setup">
-                            <p class="align-left" style="margin-top:0.4em;">Healthy motor</p>
+                            <p class="align-left caption">Healthy motor</p>
                         </div>
-                        <div class="gallery-item">
+                        <div class="gallery-item has-caption">
                             <img src="images/EE149/IMG_5291.jpeg" alt="Motor with injected fault (diode)">
-                            <p class="align-left" style="margin-top:0.4em;">Motor with error (diode)</p>
+                            <p class="align-left caption">Motor with error (diode)</p>
                         </div>
                     </div>
 
-                    <div class="align-center" style="margin-top: 70px; margin-bottom: 0;">
+                    <div class="align-center cta-wrap">
                         <ul class="actions special stacked-mobile cta-buttons">
                             <li><a href="projects.html" class="button primary">See All Projects</a></li>
                         </ul>
@@ -324,19 +188,10 @@
             </section>
         </article>
 
-        <footer id="footer">
-            <ul class="copyright">
-                <li>&copy;Aashrith Beesabathuni</li>
-            </ul>
-        </footer>
+        <footer id="site-footer"><p>&copy; Aashrith Beesabathuni</p></footer>
     </div>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/nav-toggle.js"></script>
+    <script src="assets/js/scroll-animations.js"></script>
 </body>
 </html>
