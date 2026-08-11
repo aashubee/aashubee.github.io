@@ -423,7 +423,17 @@
 @media screen and (max-width: 900px) { .featured-grid { grid-template-columns: repeat(2,1fr); } }
 @media screen and (max-width: 600px) { .featured-grid { grid-template-columns: 1fr; } }
 
-.txt-rotate > .wrap { border-right: 0.08em solid #666; }
+
+.projects-page-header { padding: 3em 7vw 1em; }
+.projects-page-header h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-top: 0.4em;
+}
+.projects-page-header p { color: var(--muted); font-size: 0.95em; }
 
 .company-logos { margin-top: 20px; }
 .logos-container {
