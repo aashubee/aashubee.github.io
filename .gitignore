@@ -1,0 +1,7 @@
+.DS_Store
+
+# Claude Code local config (per-project permissions, etc.)
+.claude/
+
+# personal working notes, not meant for the public site
+todo.txt

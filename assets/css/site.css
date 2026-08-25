@@ -13,10 +13,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.2em 7vw;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  background: rgba(13,23,22,0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(52,210,127,0.15);
+  background: rgba(22, 46, 34, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -26,7 +26,8 @@
   font-weight: 800;
   font-size: 1.1em;
   color: var(--text);
-  text-decoration: none;
+  text-decoration: none !important;
+  border-bottom: none !important;
   letter-spacing: 0.02em;
 }
 .nav-links {
@@ -40,12 +41,13 @@
   font-family: var(--font-body);
   font-size: 0.88em;
   color: var(--muted);
-  text-decoration: none;
+  text-decoration: none !important;
+  border-bottom: none !important;
   letter-spacing: 0.03em;
   transition: color 0.2s;
 }
 .nav-links a:hover,
-.nav-links a.active { color: var(--text); }
+.nav-links a.active { color: var(--text); border-bottom: 1px solid var(--accent) !important; }
 .nav-cta {
   font-family: var(--font-heading);
   font-weight: 600;
@@ -132,67 +134,115 @@
 }
 .btn-ghost:hover { border-color: rgba(255,255,255,0.3); color: var(--text); }
 
-/* ===== Hero title band (project pages + contact page) ===== */
+/* ===== Project + resume page standardization ===== */
+
+/* Kill Spectral's 6em wrapper padding and 60em width cap on project pages */
+.project-page .wrapper { padding: 0; }
+.project-page .wrapper > .inner { width: 100%; max-width: none; padding: 2.5em 12vw 3.5em; }
+
+/* Kill Spectral's banner image on all article pages */
+#main > header {
+	background-image: none !important;
+	background-color: var(--panel-strong) !important;
+	padding: 2.5em 7vw 2em !important;
+	text-align: left !important;
+	border-bottom: 1px solid rgba(52,210,127,0.08);
+}
+#main > header h2 {
+	font-family: var(--font-heading) !important;
+	font-size: clamp(2rem, 4vw, 3rem) !important;
+	font-weight: 800 !important;
+	letter-spacing: -0.01em !important;
+	color: var(--text) !important;
+	margin: 0 0 0.25em !important;
+}
+#main > header p {
+	color: var(--muted) !important;
+	letter-spacing: 0 !important;
+	text-transform: none !important;
+	font-size: 1em !important;
+	font-family: var(--font-body) !important;
+}
+
+/* Project hero title band */
 .project-hero-title {
 	background: #304c3f;
-	padding: 2.8em 1.5em 2.2em;
-	text-align: center;
-	border-bottom: 1px solid var(--accent-soft);
+	padding: 2.8em 7vw 0.6em;
+	text-align: left;
+	border-bottom: none;
 }
 .project-hero-title h2 {
 	margin: 0 !important;
+	font-family: var(--font-heading);
 	font-size: 2.6em;
 	font-weight: 800;
-	letter-spacing: 0.08em;
+	letter-spacing: 0.04em;
 	color: #f5f5f5;
 }
 .project-hero-title .subtitle {
-	margin: -0.35em 0 0 0 !important;
-	font-size: 1.1em;
-	font-weight: 700;
+	margin: 0.2em 0 0 0 !important;
+	font-size: 1em;
+	font-weight: 500;
 	letter-spacing: 0.02em;
-	color: #7a7a7a !important;
+	color: rgba(255,255,255,0.5);
 }
 
-/* ===== Project page body ===== */
+/* Project page body */
 .project-page header { text-align: center; }
 .project-page h2 { letter-spacing: 0.14em; }
 .project-page p { color: #111; line-height: 1.75; }
 
 .gallery-heading { text-align: center; }
 
+/* Skills banner */
 .banner {
-	background: linear-gradient(180deg, rgba(13, 35, 26, 0.9), rgba(12, 21, 20, 0.94));
-	padding: 24px 16px;
-	text-align: center;
-	border-top: 1px solid var(--accent-soft);
+	background: linear-gradient(180deg, var(--panel-strong) 0%, var(--panel) 100%);
+	padding: 0.6em 7vw 1.8em;
+	text-align: left;
+	border-top: none;
 	border-bottom: 1px solid var(--accent-soft);
 }
 .banner h1 {
-	margin-bottom: 0.8em;
-	letter-spacing: 0.12em;
-	color: #f5f7f6;
+	font-family: var(--font-mono);
+	font-size: 0.72em;
+	font-weight: 400;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 1em;
+	opacity: 0.9;
+}
+.banner h1::before {
+	content: "// ";
+	opacity: 0.7;
 }
 
 .skills {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	gap: 0.8em;
+	justify-content: flex-start;
+	gap: 0.55em;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 .skills li {
-	background: rgba(52, 210, 127, 0.14);
-	border: 1px solid var(--accent-soft);
-	border-radius: 999px;
-	padding: 0.6em 1em;
-	color: #e7f5ee;
-	letter-spacing: 0.05em;
-	font-weight: 500;
-	box-shadow: none;
-	transition: none;
+	font-family: var(--font-mono);
+	font-size: 0.78em;
+	background: rgba(52,210,127,0.09);
+	border: 1px solid rgba(52,210,127,0.28);
+	border-radius: 6px;
+	padding: 0.4em 0.85em;
+	color: #c5edd8;
+	letter-spacing: 0.07em;
+	font-weight: 400;
+	transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.skills li:hover {
+	background: rgba(52,210,127,0.2);
+	border-color: rgba(52,210,127,0.55);
+	box-shadow: 0 0 12px rgba(52,210,127,0.18);
+	color: #dff5eb;
 }
 
 .gallery1,
@@ -220,7 +270,6 @@
 	justify-content: center;
 	padding: 0.75em;
 }
-/* modifier: caption stacked below the media instead of side-by-side */
 .gallery-item.has-caption {
 	flex-direction: column;
 	text-align: center;
@@ -231,22 +280,23 @@
 	width: 100%;
 	height: auto;
 	max-width: 100%;
+	max-height: 500px;
 	object-fit: contain;
 	display: block;
 	padding: 0;
 	border: 2px solid var(--accent);
 	border-radius: 8px;
 }
-/* modifier: let the image keep its natural width (e.g. tall PCB renders) */
+/* width: auto + max-width/max-height let browser maintain aspect ratio properly */
 .gallery-item img.img-auto-width { width: auto; }
 .gallery-item img.img-capped { max-height: 320px; }
-.img-medium { max-height: 600px; }
+.gallery-item img.img-medium { max-height: 600px; }
+/* gallery1 hero images: proportional sizing, slightly taller cap */
+.gallery1 .gallery-item img { width: auto; max-height: 560px; }
 
 @media screen and (max-width: 736px) {
 	.gallery-item img,
-	.gallery-card img {
-		max-height: none;
-	}
+	.gallery-card img { max-height: none !important; }
 }
 
 .gallery-video {
@@ -317,7 +367,7 @@
 
 .projects-container {
 	height: fit-content;
-	margin: 30px;
+	padding: 0 7vw 4em;
 }
 .projects-grid {
 	display: grid;
@@ -466,20 +516,39 @@
 	justify-content: center;
 	text-align: center;
 }
-.contact-links a.button {
+.contact-links a {
 	width: fit-content;
 	margin: 0 auto;
 }
+.contact-card h3 {
+	font-family: var(--font-heading) !important;
+	font-size: 1.6em !important;
+	font-weight: 700 !important;
+	letter-spacing: 0 !important;
+	text-transform: none !important;
+	color: #111 !important;
+	margin-bottom: 0.4em !important;
+}
 .contact-text p {
-	color: #d7dbdd;
-	margin-bottom: 0.6em;
+	color: #555;
+	margin-bottom: 1em;
+	font-size: 1em;
+}
+.contact-links .btn-ghost {
+	border: 1px solid rgba(0,0,0,0.2);
+	color: #222;
+}
+.contact-links .btn-ghost:hover {
+	border-color: var(--accent);
+	color: var(--accent);
 }
 .contact-avatar {
 	width: 220px;
 	height: 220px;
-	border-radius: 12px;
+	border-radius: 50%;
 	object-fit: cover;
-	border: 2px solid var(--accent);
+	object-position: center 30%;
+	border: none;
 	margin: 0 auto;
 	display: block;
 }

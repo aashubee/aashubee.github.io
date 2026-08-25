@@ -4657,24 +4657,15 @@ html { scroll-behavior: smooth; }
   color: var(--text);
 }
 .hero-cta { display: flex; gap: 1em; flex-wrap: wrap; }
-.hero-corner {
-  position: absolute;
-  bottom: 2em; right: 7vw;
-  font-family: var(--font-mono);
-  font-size: 0.62em;
-  color: var(--accent);
-  opacity: 0.3;
-  letter-spacing: 0.12em;
-  z-index: 2;
-}
-/* Slot for PCB artwork — user will fill later */
+/* Slot for PCB artwork — gradient placeholder until real PCB art is added */
 .hero-pcb-slot {
   position: absolute;
   right: 0; top: 0; bottom: 0;
   width: 55%;
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
-  mask-image: linear-gradient(to right, transparent 0%, black 30%);
+  background: radial-gradient(ellipse 90% 75% at 85% 50%, rgba(52,210,127,0.09) 0%, rgba(52,210,127,0.03) 50%, transparent 80%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
+  mask-image: linear-gradient(to right, transparent 0%, black 40%);
 }
 
 /* ── about section ── */
@@ -4683,7 +4674,7 @@ html { scroll-behavior: smooth; }
   display: grid;
   grid-template-columns: 1fr 300px;
   gap: 5em;
-  align-items: start;
+  align-items: center;
 }
 .eyebrow {
   font-family: var(--font-mono);
@@ -4705,10 +4696,18 @@ html { scroll-behavior: smooth; }
   color: var(--text);
 }
 .about-section p { font-size: 1em; color: var(--muted); line-height: 1.85; }
+.about-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .about-photo .profile-image {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid rgba(52,210,127,0.2);
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 30%;
+  border: 2px solid rgba(52,210,127,0.35);
   display: block;
 }
 
