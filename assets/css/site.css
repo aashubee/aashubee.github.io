@@ -5,6 +5,8 @@
 	into a per-page <style> block on every project page.
 */
 
+html, body { background-color: #0d1716; }
+
 /* ═══════════════════════════
    SITE NAV
 ═══════════════════════════ */
