@@ -1,9 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Aashrith - Flipper Zero</title>
+    <title>Aashrith - Claw Zero</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="refresh" content="0; url=projects.html" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/site.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -47,8 +48,22 @@
                     <h3>Project Overview</h3>
                     <p class="align-left">
                         For my final project for APE, my team decided to build a functioning Claw Zero (based on the Flipper Zero [ADDDD LINK]). 
-                        Since the project required 
+                        Similar in spirit to the Flipper Zero, the Claw Zero was aimed at making imporvmenets, including high preformaing analog, and wireless capabilities.
+                        The device will use USB-C Power Delivery to negotiate input power, allowing simultaneous operation and charging of a single-cell Li-ion or LiFePO₄ battery 
+                        through an integrated battery protection and charging IC, with a fuel gauge providing accurate state-of-charge monitoring. A microcontroller (STM32 class) will 
+                        manage user interaction through an LCD or OLED display, directional buttons, status LEDs, and optional haptic feedback, while also interfacing with external flash 
+                        for firmware and data storage. The system will support multiple wireless and sensing modalities, including Bluetooth Low Energy at 2.4 GHz, sub-GHz radios for long-range 
+                        communication, and RFID for proximity-based interaction. Additional I/O includes IR transmit/receive for device control, debug interfaces such as SWD/JTAG, and 
+                        potentially expanded GPIO for external modules. Advanced design elements include mixed-signal PCB layout (RF + analog + digital domains), power-path management for 
+                        simultaneous charging and load sharing, and multi-protocol RF coexistence. The requirements of the project included a high speed signal, advanced analog, and a power requirement. We included a high resolution screen, utilized
+                        wireless analog components, and had a BMS to satsify all requirements respecitvely. 
                     </p>
+
+                    <div class="gallery1">
+                        <div class="gallery-item">
+                            <img src="images/HOPE/block_diagram.svg" alt="System block diagram">
+                        </div>
+                    </div>
 
                     <div class="gallery1">
                         <div class="gallery-item">
@@ -58,8 +73,7 @@
 
                     <h3>My Role — NFC Subsystem</h3>
                     <p class="align-left">
-                        [Placeholder — describe your ownership of the NFC subsystem: IC selection, antenna design/matching,
-                        protocol support (ISO 14443, ISO 15693, etc.), and how it integrates with the main MCU.]
+                        I and one other teammate were assigned to the NFC susbsytem. This was one of the more complex subcompoennts of our board. 
                     </p>
                     <p class="align-left">
                         [Placeholder — any interesting design decisions, constraints, or tradeoffs you made in the NFC layout
