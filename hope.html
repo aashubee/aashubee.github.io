@@ -35,9 +35,10 @@
                     <li>PCB Design (KiCad)</li>
                     <li>NFC / RFID</li>
                     <li>RF Systems</li>
-                    <li>Schematic Capture</li>
                     <li>Mixed-Signal Layout</li>
-                    <li>Embedded Systems</li>
+                    <li>USB-C Power Delivery</li>
+                    <li>Power Management</li>
+                    <li>Embedded Systems (STM32)</li>
                     <li>Communication Protocols</li>
                 </ul>
             </section>
@@ -46,58 +47,78 @@
                 <div class="inner">
                     <h3>Project Overview</h3>
                     <p class="align-left">
-                        [Placeholder — describe what APE is, what inspired the build, and what the team set out to make.
-                        Something like: APE is a team-built portable security and RF research tool inspired by the Flipper Zero.
-                        The goal was to design and fabricate a custom PCB capable of NFC/RFID emulation, sub-GHz RF,
-                        IR blasting, and GPIO hacking — all in a compact handheld form factor.]
+                        APE is a handheld, battery-powered embedded security and RF research tool built by the HOPE collective,
+                        inspired by the Flipper Zero but designed with higher-performance analog, RF, and power capabilities.
+                        The device supports multiple wireless and sensing modalities — Bluetooth Low Energy, sub-GHz radio,
+                        RFID read/emulation, and IR transmit/receive — all in a compact form factor powered by a single-cell
+                        Li-ion or LiFePO₄ battery.
                     </p>
                     <p class="align-left">
-                        [Placeholder — brief note on project status: board designed, ordered, and currently awaiting bring-up and testing.]
+                        The system uses USB-C Power Delivery to negotiate input power, enabling simultaneous operation and
+                        charging via an integrated BMS and charging IC, with a fuel gauge for accurate state-of-charge monitoring.
+                        An STM32-class microcontroller manages user interaction through an LCD/OLED display, directional pad,
+                        status LEDs, and optional haptics, while interfacing with external flash and a microSD card for firmware
+                        and data storage. The board has been designed and ordered — bring-up and testing is the next phase.
                     </p>
 
                     <div class="gallery1">
                         <div class="gallery-item">
-                            <img src="images/HOPE/full_real_board.jpeg" alt="APE PCB - full board">
+                            <img src="images/HOPE/full_real_board.jpeg" alt="APE PCB - assembled board">
                         </div>
                     </div>
 
-                    <h3>My Role — NFC Subsystem</h3>
-                    <p class="align-left">
-                        [Placeholder — describe your ownership of the NFC subsystem: IC selection, antenna design/matching,
-                        protocol support (ISO 14443, ISO 15693, etc.), and how it integrates with the main MCU.]
-                    </p>
-                    <p class="align-left">
-                        [Placeholder — any interesting design decisions, constraints, or tradeoffs you made in the NFC layout
-                        (ground pours, trace impedance, component placement near the antenna loop, etc.).]
-                    </p>
+                    <h3>System Architecture</h3>
+                    <p class="align-left">The board is partitioned into four major domains, each with distinct design requirements:</p>
+                    <ul class="align-left">
+                        <li><strong>Power</strong> — USB-C PD negotiation, single-cell battery charging + protection, 3.3 V and 5 V boost regulators, fuel gauge. Designed for simultaneous charge + run with proper load sharing.</li>
+                        <li><strong>Digital / MCU</strong> — STM32-class MCU with SWD/JTAG debug port, external flash, microSD. Drives display, buttons, LEDs, and haptics.</li>
+                        <li><strong>RF / Analog</strong> — Sub-GHz radio, RFID antenna front-end, IR blaster + receiver, BLE at 2.4 GHz. Mixed-signal layout with careful domain separation.</li>
+                        <li><strong>User Interface</strong> — LCD or OLED display (high-resolution), directional pad, power button, status LEDs, optional haptic motor.</li>
+                    </ul>
 
-                    <h3>Schematics & Layout</h3>
+                    <div class="gallery2">
+                        <div class="gallery-item">
+                            <img src="images/HOPE/schematic-new" alt="Full board schematic">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/HOPE/layout.png" alt="PCB layout">
+                        </div>
+                    </div>
+
+                    <h3>My Role — RFID Subsystem</h3>
                     <p class="align-left">
-                        [Placeholder — brief overview of the full board schematic and layout. Mention power domains,
-                        major ICs, and how subsystems are partitioned.]
+                        My contribution was the RFID subsystem — designing the analog front-end for reading and emulating RFID tags
+                        using a custom loop antenna. This involved IC selection, antenna matching network design, and layout
+                        decisions to isolate the sensitive analog RF path from digital noise on the rest of the board.
+                        The RFID subsystem satisfies the analog design requirement for the project, as it involves
+                        continuous-time signal conditioning, impedance matching, and antenna resonance tuning.
                     </p>
 
                     <div class="gallery2">
                         <div class="gallery-item">
-                            <img src="images/HOPE/schematic-new" alt="Schematic">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/HOPE/layout.png" alt="PCB Layout">
-                        </div>
-                    </div>
-
-                    <div class="gallery2">
-                        <div class="gallery-item">
-                            <img src="images/HOPE/full_3d_board.png" alt="3D render of board">
+                            <img src="images/HOPE/full_3d_board.png" alt="3D render of full board">
                         </div>
                         <div class="gallery-item">
                             <img src="images/HOPE/unnamed copy.png" alt="Board detail">
                         </div>
                     </div>
 
-                    <h3>Assembly & Build Process</h3>
+                    <h3>Design Challenges</h3>
                     <p class="align-left">
-                        [Placeholder — describe ordering the board, assembly process, soldering, and where things stand.]
+                        The biggest challenges in this design center on RF coexistence and mixed-signal integrity.
+                        Running BLE (2.4 GHz), sub-GHz, and RFID simultaneously on one board requires careful antenna
+                        placement, ground plane management, and shielding strategy to prevent inter-modulation and
+                        desensitization. Power management also presented non-trivial challenges — USB-PD negotiation
+                        in a compact battery-powered system requires coordinating the charger IC, fuel gauge, and
+                        boost regulators under varying load conditions without dropping out or creating ground bounce
+                        that affects sensitive analog sections.
+                    </p>
+
+                    <h3>Build Process</h3>
+                    <p class="align-left">
+                        After finalizing the schematic and layout in KiCad, the board was ordered and partially assembled.
+                        Bring-up and functional testing of each subsystem — starting with power rails, then MCU, then RF —
+                        is the next step.
                     </p>
 
                     <div class="gallery2">
@@ -105,13 +126,14 @@
                             <img src="images/HOPE/solder_process.jpeg" alt="Soldering process">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/HOPE/board_solder_esp32.jpeg" alt="ESP32 soldered">
+                            <img src="images/HOPE/board_solder_esp32.jpeg" alt="Board with ESP32 soldered">
                         </div>
                     </div>
 
                     <h3>Team</h3>
                     <p class="align-left">
-                        [Placeholder — brief description of the HOPE collective and team members / their roles.]
+                        APE was built by the HOPE collective — a group of Berkeley engineers who each owned a subsystem
+                        end-to-end, from schematic to layout to bring-up.
                     </p>
 
                     <div class="gallery1">
@@ -119,12 +141,6 @@
                             <img src="images/HOPE/group_pic.JPG" alt="HOPE team">
                         </div>
                     </div>
-
-                    <h3>Status & Next Steps</h3>
-                    <p class="align-left">
-                        [Placeholder — board has been designed and ordered. Next steps: bring-up, NFC subsystem validation,
-                        firmware bringup. What you'd do differently on rev 2.]
-                    </p>
 
                     <div class="align-center cta-wrap">
                         <ul class="actions special stacked-mobile cta-buttons">
