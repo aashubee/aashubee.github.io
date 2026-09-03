@@ -1,10 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Aashrith - Claw Zero</title>
+    <title>Aashrith - APE</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta http-equiv="refresh" content="0; url=projects.html" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/site.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -26,7 +25,7 @@
 
         <article id="main" class="project-page">
             <header class="project-hero-title">
-                <h2>Claw Zero — A Portable Wireless Emulator</h2>
+                <h2>APE — A Portable Wireless Emulator</h2>
                 <p class="subtitle">APE (Advanced PCB Engineering) Final Project</p>
             </header>
 
@@ -47,7 +46,7 @@
                 <div class="inner">
                     <h3>Project Overview</h3>
                     <p class="align-left">
-                        For my final project for APE, my team decided to build a functioning Claw Zero (based on the Flipper Zero [ADDDD LINK]). 
+                        For my final project for APE, my team decided to build a functioning Claw Zero (based on the Flipper Zero [ADDDD LINK]).
                         Similar in spirit to the Flipper Zero, the Claw Zero was aimed at making imporvmenets, including high preformaing analog, and wireless capabilities.
                         The device will use USB-C Power Delivery to negotiate input power, allowing simultaneous operation and charging of a single-cell Li-ion or LiFePO₄ battery 
                         through an integrated battery protection and charging IC, with a fuel gauge providing accurate state-of-charge monitoring. A microcontroller (STM32 class) will 
@@ -61,23 +60,17 @@
 
                     <div class="gallery1">
                         <div class="gallery-item">
-                            <img src="images/HOPE/block_diagram.svg" alt="System block diagram">
-                        </div>
-                    </div>
-
-                    <div class="gallery1">
-                        <div class="gallery-item">
-                            <img src="images/HOPE/full_real_board.jpeg" alt="APE PCB - full board">
+                            <img src="images/APE/full_real_board.jpeg" alt="APE PCB - full board">
                         </div>
                     </div>
 
                     <h3>My Role — NFC Subsystem</h3>
                     <p class="align-left">
-                        I and one other teammate were assigned to the NFC susbsytem. This was one of the more complex subcompoennts of our board. 
+                        I and one other teammate were assigned to the NFC susbsytem. This was one of the more complex subcompoennts of our board, and included choosing the 
+                        correct IC, completing both schematic and layout, along with preforming calculations to ensure our antenna was correct
                     </p>
                     <p class="align-left">
-                        [Placeholder — any interesting design decisions, constraints, or tradeoffs you made in the NFC layout
-                        (ground pours, trace impedance, component placement near the antenna loop, etc.).]
+                        The IC used for the NFC capability in this project was the ST25R, taking inspiration from the original chip on the Flipper Zero. 
                     </p>
 
                     <h3>Schematics & Layout</h3>
@@ -88,33 +81,37 @@
 
                     <div class="gallery2">
                         <div class="gallery-item">
-                            <img src="images/HOPE/schematic-new" alt="Schematic">
+                            <img src="images/APE/schematic-new" alt="Schematic">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/HOPE/layout.png" alt="PCB Layout">
+                            <img src="images/APE/layout.png" alt="PCB Layout">
                         </div>
                     </div>
 
                     <div class="gallery2">
                         <div class="gallery-item">
-                            <img src="images/HOPE/full_3d_board.png" alt="3D render of board">
+                            <img src="images/APE/full_3d_board.png" alt="3D render of board">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/HOPE/unnamed copy.png" alt="Board detail">
+                            <img src="images/APE/unnamed copy.png" alt="Board detail">
                         </div>
                     </div>
 
                     <h3>Assembly & Build Process</h3>
                     <p class="align-left">
-                        [Placeholder — describe ordering the board, assembly process, soldering, and where things stand.]
+                        One of the biggest challenges we faced on the board was integration with all other subsytems. We did not have many size contarints, but we will wanted a portable and compact
+                        device utlizing all the techniques we learned in class. Integration itself, such as ensuring all susbsytems had a place on the board, and limiting 
+                        the ampunt of cross-talk and intefernce we got from all these devices. After the schematic was complete, we ordered the boards and started the build process. Due to the complexity
+                        of the soldering + some BGA compoenents, we ordered a stencil, and used a reflow oven to ensure our connections were solid. This step also involved alot of debugging, and 
+                        continuitty tests. 
                     </p>
 
                     <div class="gallery2">
                         <div class="gallery-item">
-                            <img src="images/HOPE/solder_process.jpeg" alt="Soldering process">
+                            <img src="images/APE/solder_process.jpeg" alt="Soldering process">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/HOPE/board_solder_esp32.jpeg" alt="ESP32 soldered">
+                            <img src="images/APE/board_solder_esp32.jpeg" alt="ESP32 soldered">
                         </div>
                     </div>
 
@@ -125,7 +122,7 @@
 
                     <div class="gallery1">
                         <div class="gallery-item">
-                            <img src="images/HOPE/group_pic.JPG" alt="HOPE team">
+                            <img src="images/APE/group_pic.JPG" alt="HOPE team">
                         </div>
                     </div>
 
